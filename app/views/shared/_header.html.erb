@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-xl navbar-dark bg-main">
+  <div class="container-fluid">
+      <%= link_to 'NICOTTI', root_path, class: 'navbar-brand' %>
+      <div class= 'col-auto'>
+        <% if logged_in? %>
+          <%= link_to "ユーザー編集", edit_user_path(current_user.id), class: 'btn btn-sm header-button mx-1' %>
+          <%= link_to "ログアウト", :logout, method: :post, class: 'btn btn-sm header-button mx-1' %>
+        <% else %>
+          <%= link_to "ユーザー登録", new_user_path, class: 'btn btn-sm header-button mx-1' %>
+          <%= link_to "ログイン", :login, class: 'btn btn-sm header-button mx-1' %>
+        <% end %>
+      </div>
+  </div>
+</nav>
