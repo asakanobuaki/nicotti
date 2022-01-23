@@ -1,3 +1,4 @@
 ja:
   defaults:
     login: 'ログイン'
+    register: '新規登録'
