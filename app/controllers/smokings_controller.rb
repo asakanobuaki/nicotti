@@ -6,7 +6,7 @@ class SmokingsController < ApplicationController
   def create
     @smoking = current_user.smokings.build
     @smoking.save!
-    redirect_to users_path
+    redirect_to users_path, success: '喫煙を登録しました'
   end
 
   def destroy
