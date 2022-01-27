@@ -19,16 +19,27 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to @user, success: 'ユーザー情報を更新しました。'
+    else
+      flash[:danger] = '更新に失敗しました。'
+      render :edit
+    end
   end
 
   def edit
+    @user = User.find(params[:id])
   end
 
   def destroy
+    @user = User.find(params[:id])
+    @user.destroy!
+    redirect_to root_path, info: 'ユーザーを削除しました。'
   end
 
   private
     def user_params
-     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+     params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number)
     end
 end

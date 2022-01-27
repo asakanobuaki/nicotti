@@ -9,3 +9,4 @@ ja:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
+        target_number: '1日の目標喫煙本数'

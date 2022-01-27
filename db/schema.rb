@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_16_082825) do
+ActiveRecord::Schema.define(version: 2022_01_27_030230) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "per_day_smokings", force: :cascade do |t|
+    t.integer "number_of_smoking"
+    t.date "smoked_on"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_per_day_smokings_on_user_id"
+  end
+
+  create_table "smokings", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_smokings_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
@@ -22,7 +38,11 @@ ActiveRecord::Schema.define(version: 2022_01_16_082825) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "name", null: false
+    t.integer "excess_cigarettes", default: 0, null: false
+    t.integer "target_number", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "per_day_smokings", "users"
+  add_foreign_key "smokings", "users"
 end
