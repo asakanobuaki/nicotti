@@ -9,4 +9,10 @@ class User < ApplicationRecord
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }
 
   validates :email, uniqueness: true, presence: true
+
+
+  # 本日の残り喫煙本数(これは画面に表示する内容なのでデコレイターに書くべきなのか？)
+  def remaining_number
+    self.target_number.to_i - self.smokings.where(created_at: Date.today.all_day).count
+  end
 end
