@@ -17,5 +17,7 @@ class SmokingsController < ApplicationController
   end
 
   def destroy
+    @smoking = current_user.smokings.order(created_at: :desc).limit(1)
+    @smoking.destroy
   end
 end
