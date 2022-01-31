@@ -7,9 +7,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
-  <body class= 'bg-top', style='padding-top:60px' >
+  <body class= 'bg-top', style='padding: 60px  0px' >
     <%= render 'shared/header' %>
     <%= render 'shared/flash_message' %>
     <%= yield %>

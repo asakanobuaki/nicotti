@@ -29,3 +29,20 @@
   border: solid 2px #36D2A4;
   color: #36D2A4;
 }
+
+.btn-ippuku {
+  padding: 0.3em 1em;
+  border: solid 2px #FFFFFF;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background-color: #36D2A4;
+  transition: 0.3s;
+  font-weight: 600;
+  text-align: center;
+}
+
+.btn-ippuku:hover {
+  background-color: #FFFFFF;
+  border: solid 2px #36D2A4;
+  color: #36D2A4;
+}
