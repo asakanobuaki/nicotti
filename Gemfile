@@ -33,6 +33,9 @@ gem 'sorcery'
 # Model
 gem 'enum_help'
 
+# 定期実行
+gem 'whenever', require: false
+
 group :development, :test do
   # debugger
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

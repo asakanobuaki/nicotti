@@ -15,4 +15,8 @@ class User < ApplicationRecord
   def remaining_number
     self.target_number.to_i - self.smokings.where(created_at: Date.today.all_day).count
   end
+
+  def today_smokings
+    self.smokings.where(created_at: Date.today.all_day).count
+  end
 end
