@@ -12,7 +12,8 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "bootstrap";
+import { Offcanvas } from "bootstrap";
 import "../stylesheets/application.scss";
+import '@fortawesome/fontawesome-free/js/all'
 require('jquery')
 require('slick.js')

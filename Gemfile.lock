@@ -135,6 +135,9 @@ GEM
       activesupport (>= 5.0)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
+    i18n_generators (2.2.2)
+      activerecord (>= 3.0.0)
+      railties (>= 3.0.0)
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -341,6 +344,7 @@ DEPENDENCIES
   factory_bot_rails
   faker
   fuubar
+  i18n_generators
   jbuilder (~> 2.7)
   listen (~> 3.3)
   meta-tags

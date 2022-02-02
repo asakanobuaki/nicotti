@@ -11,10 +11,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
-  <body class= 'bg-top', style='padding: 60px  0px' >
+  <body class= 'bg-top d-flex flex-column', style='padding: 56px  0px' >
     <%= render 'shared/header' %>
-    <%= render 'shared/flash_message' %>
-    <%= yield %>
+    <main class='pt-1 position-relative flex-grow-1'>
+        <%= render 'shared/sidebar' %>
+        <%= render 'shared/flash_message' %>
+        <%= yield %>
+    </main>
     <%= render 'shared/footer' %>
   </body>
 </html>

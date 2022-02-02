@@ -3,12 +3,21 @@
   <div class='container'>
     <div class='row'>
       <div class='col-lg-11 col-md-11 col-sm-12 mx-auto'>
-        <div class='page-whole'>
+        <div class='page-whole mx-auto'>
           <div class='row'>
             <div class='col-md-5'>
               <div class='left-page'>
-                <div class='py-3'>
-                  <p>今日はあと<span class='bg-warning'><%= current_user.remaining_number %></span>本</p>
+                <div class='row justify-content-between'>
+                  <div class='col-4 col-md-9'>
+                    <div class='mt-3'>
+                      <%= @today %>
+                    </div>
+                  </div>
+                  <div class='col-auto'>
+                    <div class='mt-3 text-center'>
+                      今日はあと<span class='bg-warning'><%= current_user.remaining_number %></span>本
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -16,6 +25,9 @@
               <div class='right-page'>
                 <div class='nicotti-status'>
                   <div class='status-text'>ステータス：健康</div>
+                </div>
+                <div class='nicotti-life'>
+                  <div class='status-text'>人生１回目</div>
                 </div>
                 <div class='nicotti-position'>
                   <%= image_tag 'nicotti-healthy.png', :size =>"130x220" %>
@@ -27,17 +39,23 @@
                 <div class='py-1'>
                   <div class='words mx-auto'>
                     <div>
-                      <p>NICOTTI：</p>
-                      <p>「今日もすこぶる体調がいいよ！！」</p>
-                      <p>「目標を達成できるよう頑張ろう！」</p>
+                        NICOTTI：</br>
+                      「今日もすこぶる体調がいいよ！！」</br>
+                      「目標を達成できるよう頑張ろう！」
                     </div>
                   </div>
                 </div>
                 <div class='pt-3'>
-                  <div class='row'>
-                    <h6 class='text-center mb-3'>今日の喫煙<span class='bg-warning'><%= current_user.today_smokings %></span>回</h6>
-                    <%= render 'smokings/smoking'%>
-                    <p class='text-center'>取り消す</p>
+                  <div class='row row-cols-1 justify-content-center'>
+                    <div class='col-11'>
+                      <h6 class='text-center mb-3'>今日の喫煙<span class='bg-warning'><%= current_user.today_smokings %></span>回</h6>
+                    </div>
+                    <div class='col-11 mb-2'>
+                      <%= render 'smokings/smoking'%>
+                    </div>
+                    <div class='col-11'>
+                      <p class='text-center'>取り消す</p>
+                    </div>
                   </div>   
                 </div>
               </div>

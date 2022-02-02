@@ -32,7 +32,7 @@
 
 .btn-ippuku {
   padding: 0.3em 1em;
-  border: solid 2px #FFFFFF;
+  border: solid 2px #11b684;
   border-radius: 10px;
   color: #FFFFFF;
   background-color: #36D2A4;
@@ -45,4 +45,15 @@
   background-color: #FFFFFF;
   border: solid 2px #36D2A4;
   color: #36D2A4;
+}
+
+.btn-outline-success {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #41b17d;
+  border-color: #198754;
 }

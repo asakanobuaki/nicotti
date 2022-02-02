@@ -2,7 +2,7 @@
 .bg-top {
   width: 100%;
   height: 100%;
-  background-image: url(/images/room-1.jpeg);
+  background-image: url(/assets/matinami.jpeg);
   background-size: cover;
 }
 
@@ -24,6 +24,10 @@
   max-width: 500px;
 }
 
+.right-page{
+  position: relative;
+}
+
 .swiper-wrapper {
   border-radius: 5px;
     width: 100%;
@@ -37,7 +41,7 @@
 .nicotti-position {
   position: absolute;
   z-index: 20;
-  margin-left: 100px;
+  margin-left: 35%;
   margin-top: 65px;
 }
 
@@ -46,7 +50,19 @@
   display: inline-block;
   z-index: 20;
   margin-top: 16px;
-  margin-left: 26px;
+  margin-left: 14px;
+  background-color: #c4c4c4;
+  border-radius: 30px;
+  opacity: 0.7;
+  padding: 2px 10px;
+}
+
+.nicotti-life {
+  position: absolute;
+  display: inline-block;
+  z-index: 20;
+  margin-top: 16px;
+  margin-left: 14px;
   background-color: #c4c4c4;
   border-radius: 30px;
   opacity: 0.7;
@@ -62,7 +78,7 @@
   border: solid 3px #36D2A4;
   border-radius: 10px;
   padding: 10px 20px;
-  max-width: 1200px;
+  max-width: 800px;
 }
 
 
