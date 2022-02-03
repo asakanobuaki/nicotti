@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @today = l Date.today
+    @today = l Date.today #デコレイター行き
   end
 
   def update

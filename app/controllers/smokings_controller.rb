@@ -9,8 +9,15 @@ class SmokingsController < ApplicationController
 
     if current_user.smokings.where(created_at: Date.today.all_day).count > current_user.target_number
       @user = User.find(current_user.id)
-      @user.excess_cigarettes += 1
+      @user.excess_cigarette += 1
       @user.save
+
+      # ここからモデルにメソッド作る方がいい
+      if @user.excess_cigarette == 6
+        @user.baldness!
+      elsif @user.excess_cigarette == 8
+        @user.cancer!
+      end
     end
 
     redirect_to users_path, success: '喫煙を登録しました'
