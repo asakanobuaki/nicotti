@@ -1,0 +1,7 @@
+ja:
+  enums:
+    user:
+      state:
+        healthy: '健康'
+        baldness: 'ハゲ'
+        cancer: 'がん'

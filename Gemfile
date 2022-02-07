@@ -25,6 +25,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # UI/UX
 gem 'rails-i18n', '~> 6.0'
+gem 'i18n_generators'
 gem 'meta-tags'
 
 # Authentication
@@ -32,6 +33,9 @@ gem 'sorcery'
 
 # Model
 gem 'enum_help'
+
+# 定期実行
+gem 'whenever', require: false
 
 group :development, :test do
   # debugger

@@ -12,6 +12,12 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "bootstrap";
+import { Offcanvas } from "bootstrap";
 import "../stylesheets/application.scss";
+import '@fortawesome/fontawesome-free/js/all'
+import toastr from 'toastr'
+window.toastr = toastr
+
 require('jquery')
+require('slick.js')
+require('common.js')

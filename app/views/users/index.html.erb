@@ -1,59 +1,61 @@
-<section>
-<!-- #セクション１（「本日の残り本数」「ステータス」）-->
-  <div class='pt-4'>
-    <section>
-      <div class='container'>
-        <div class='row'>
-          <p>今日はあと<span class='bg-warning'>4</span>本</p>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!--# セクション２（キャラクター画面）-->
-  <div>
-  <div class='py-1'>
-  <section>
-    <div class='container'>
-      <div class='row'>
-        <div class='class="col-lg-11 col-md-11 col-sm-12 mx-auto"'>
-          <div class='main-page mx-auto'>
-            <div>
-            <p>画像</p>
+
+<section class='mt-3'>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-11 col-md-11 col-sm-12 mx-auto'>
+        <div class='page-whole mx-auto'>
+          <div class='row'>
+            <div class='col-md-5'>
+              <div class='left-page'>
+                <div class='row justify-content-between'>
+                  <div class='col-4 col-md-9'>
+                    <div class='mt-3'>
+                      <%= @today %>
+                    </div>
+                  </div>
+                  <%= render 'remaining' %>
+                </div>
+              </div>
+            </div>
+            <div class='col-md-7'>
+              <div class='right-page'>
+                <div class='nicotti-status'>
+                  <div class='status-text'>ステータス：健康</div>
+                </div>
+                <div class='nicotti-life me-1'>
+                  <div class='status-text'>人生１回目</div>
+                </div>
+                <div class='nicotti-position' style="display: none">
+                  <%= image_tag 'nicotti-healthy.png', :size =>"130x220" %>
+                </div>
+                <div class='swiper-wrapper mx-auto'>
+                  <div><%= image_tag 'room-2.jpeg'%></div>
+                  <div><%= image_tag 'room-2.jpeg'%></div>
+                </div>
+                <div class='py-1'>
+                  <div class='words mx-auto'>
+                    <div>
+                        NICOTTI：</br>
+                      「今日もすこぶる体調がいいよ！！」</br>
+                      「目標を達成できるよう頑張ろう！」
+                    </div>
+                  </div>
+                </div>
+                <buttom class='btn btn-primary btn-lg mx-auto' id="test-test">表示する</buttom>
+                <div class='pt-3'>
+                  <div class='row row-cols-1 justify-content-center'>
+                    <%= render 'today_smokings' %>
+                    <%= render 'smokings/smoking'%>
+                    <div class='col-11'>
+                      <p class='text-center'>取り消す</p>
+                    </div>
+                  </div>   
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  </div>
-  <!--# セクション３（キャラクター吹き出し画面）-->
-  <div>
-  <div class='py-1'>
-  <section>
-    <div class='container'>
-      <div class='row'>
-        <div class='class="col-lg-11 col-md-11 col-sm-12 mx-auto"'>
-          <div class='words mx-auto'>
-            <div>
-            <p>セリフ</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  </div>
-  <!--# セクション４　(「一服ボタン」「今日の喫煙本数」)-->
-  <div>
-  <div class='pt-3'>
-    <section>
-      <div class='container'>
-        <div class='row justify-content:flex-center'>
-          <h6 class='text-center mb-3'>今日の喫煙<span class='bg-warning'><%= current_user.smokings.count %></span>回</h6>
-          <%= render 'smoking'%>
-          <p class='text-center'>取り消す</p>
-        </div>
-      </div>
-    </section>
   </div>
 </section>

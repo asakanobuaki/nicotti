@@ -14,8 +14,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def index
-    @users = User.all
+    @today = l Date.today #デコレイター行き
   end
 
   def update
@@ -37,6 +41,7 @@ class UsersController < ApplicationController
     @user.destroy!
     redirect_to root_path, info: 'ユーザーを削除しました。'
   end
+
 
   private
     def user_params
