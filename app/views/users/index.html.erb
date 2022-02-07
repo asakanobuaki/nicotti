@@ -13,11 +13,7 @@
                       <%= @today %>
                     </div>
                   </div>
-                  <div class='col-auto'>
-                    <div class='mt-3 text-center'>
-                      今日はあと<span class='bg-warning'><%= current_user.remaining_number %></span>本
-                    </div>
-                  </div>
+                  <%= render 'remaining' %>
                 </div>
               </div>
             </div>
@@ -29,7 +25,7 @@
                 <div class='nicotti-life me-1'>
                   <div class='status-text'>人生１回目</div>
                 </div>
-                <div class='nicotti-position'>
+                <div class='nicotti-position' style="display: none">
                   <%= image_tag 'nicotti-healthy.png', :size =>"130x220" %>
                 </div>
                 <div class='swiper-wrapper mx-auto'>
@@ -45,14 +41,11 @@
                     </div>
                   </div>
                 </div>
+                <buttom class='btn btn-primary btn-lg mx-auto' id="test-test">表示する</buttom>
                 <div class='pt-3'>
                   <div class='row row-cols-1 justify-content-center'>
-                    <div class='col-11'>
-                      <h6 class='text-center mb-3'>今日の喫煙<span class='bg-warning'><%= current_user.today_smokings %></span>回</h6>
-                    </div>
-                    <div class='col-11 mb-2'>
-                      <%= render 'smokings/smoking'%>
-                    </div>
+                    <%= render 'today_smokings' %>
+                    <%= render 'smokings/smoking'%>
                     <div class='col-11'>
                       <p class='text-center'>取り消す</p>
                     </div>

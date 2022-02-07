@@ -19,8 +19,6 @@ class SmokingsController < ApplicationController
         @user.cancer!
       end
     end
-
-    redirect_to users_path, success: '喫煙を登録しました'
   end
 
   def destroy
