@@ -6,9 +6,10 @@ class SmokingsController < ApplicationController
   def create
     @smoking = current_user.smokings.build
     @smoking.save!
+    
+    @user = User.find(current_user.id)
 
     if current_user.smokings.where(created_at: Date.today.all_day).count > current_user.target_number
-      @user = User.find(current_user.id)
       @user.excess_cigarette += 1
       @user.save
 
@@ -19,6 +20,11 @@ class SmokingsController < ApplicationController
         @user.cancer!
       end
     end
+
+    respond_to do |format|
+      format.json { render json: @user}
+    end
+
   end
 
   def destroy

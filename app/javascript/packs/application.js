@@ -21,3 +21,4 @@ window.toastr = toastr
 require('jquery')
 require('slick.js')
 require('common.js')
+require('smoking.js')

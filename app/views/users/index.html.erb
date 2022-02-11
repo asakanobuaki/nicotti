@@ -19,15 +19,8 @@
             </div>
             <div class='col-md-7'>
               <div class='right-page'>
-                <div class='nicotti-status'>
-                  <div class='status-text'>ステータス：健康</div>
-                </div>
-                <div class='nicotti-life me-1'>
-                  <div class='status-text'>人生１回目</div>
-                </div>
-                <div class='nicotti-position' style="display: none">
-                  <%= image_tag 'nicotti-healthy.png', :size =>"130x220" %>
-                </div>
+                <%= render 'status_life' %>
+                <%= render 'nicotti' %>
                 <div class='swiper-wrapper mx-auto'>
                   <div><%= image_tag 'room-2.jpeg'%></div>
                   <div><%= image_tag 'room-2.jpeg'%></div>
@@ -41,7 +34,6 @@
                     </div>
                   </div>
                 </div>
-                <buttom class='btn btn-primary btn-lg mx-auto' id="test-test">表示する</buttom>
                 <div class='pt-3'>
                   <div class='row row-cols-1 justify-content-center'>
                     <%= render 'today_smokings' %>
