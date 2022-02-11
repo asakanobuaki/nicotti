@@ -14,15 +14,17 @@ $(document).on('turbolinks:load', function() {
         console.log(data);
         const state = data.state;
         if (state == "baldness"){
-          $(".nicotti-position, .nicotti-position-1").fadeOut();
+          $("#js-status").html("<div class='status-text'>ステータス：ハゲ</div>");
+          $(".nicotti-position, .nicotti-position-2").fadeOut();
             $(".nicotti-position-1").fadeIn();
          }
         else if (state == "cancer") {
+          $("#js-status").html("<div class='status-text'>ステータス：がん</div>");
           $(".nicotti-position, .nicotti-position-1").fadeOut();
             $(".nicotti-position-2").fadeIn();
          }
 
-        //  $('#js-today-smokings').html("j(render('users/today_smokings'))");
+        // $('#js-today-smokings').html("j(render('users/today_smokings'))");
          
       })
 

@@ -26,18 +26,12 @@
                   <div><%= image_tag 'room-2.jpeg'%></div>
                 </div>
                 <div class='py-1'>
-                  <div class='words mx-auto'>
-                    <div>
-                        NICOTTI：</br>
-                      「今日もすこぶる体調がいいよ！！」</br>
-                      「目標を達成できるよう頑張ろう！」
-                    </div>
-                  </div>
+                  <%= render 'nicotti_words' %>
                 </div>
                 <div class='pt-3'>
                   <div class='row row-cols-1 justify-content-center'>
                     <%= render 'today_smokings' %>
-                    <%= render 'smokings/smoking'%>
+                    <%= render 'smokings/smoking' %>
                     <div class='col-11'>
                       <p class='text-center'>取り消す</p>
                     </div>
