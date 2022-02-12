@@ -21,9 +21,19 @@ class SmokingsController < ApplicationController
       end
     end
 
+    user_smoking = @user.smokings.where(created_at: Date.today.all_day).count
+    remianing_smoking = @user.target_number - user_smoking
+
     respond_to do |format|
       format.html
-      format.json { render json: @user}
+      format.json { render json: {
+                    id: @user.id, 
+                    excess_cigarette: @user.excess_cigarette,
+                    state: @user.state,
+                    user_smoking: user_smoking,
+                    remianing_smoking: remianing_smoking
+                  }
+      }
     end
 
   end

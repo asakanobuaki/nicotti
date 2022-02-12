@@ -11,8 +11,13 @@ $(document).on('turbolinks:load', function() {
     })
 
     .done(function(data) {
+
         console.log(data);
+
         const state = data.state;
+        const todaySmoking = data.user_smoking;
+        const remaining = data.remianing_smoking;
+
         if (state == "baldness"){
           $("#js-status").html("<div class='status-text'>ステータス：ハゲ</div>");
           $(".nicotti-position, .nicotti-position-2").fadeOut();
@@ -24,8 +29,9 @@ $(document).on('turbolinks:load', function() {
             $(".nicotti-position-2").fadeIn();
          }
 
-        // $('#js-today-smokings').html("j(render('users/today_smokings'))");
-         
+         $("#js-remaining-number").html(`<span class='bg-warning' id='js-remaining-number' >${remaining}</span>`);
+         $("#js-today-smoking").html(`<span class='bg-warning' id='js-today-smoking' >${todaySmoking}</span>`);
+        
       })
 
     .fail(function() {
