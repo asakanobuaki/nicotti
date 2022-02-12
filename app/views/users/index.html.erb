@@ -19,33 +19,19 @@
             </div>
             <div class='col-md-7'>
               <div class='right-page'>
-                <div class='nicotti-status'>
-                  <div class='status-text'>ステータス：健康</div>
-                </div>
-                <div class='nicotti-life me-1'>
-                  <div class='status-text'>人生１回目</div>
-                </div>
-                <div class='nicotti-position' style="display: none">
-                  <%= image_tag 'nicotti-healthy.png', :size =>"130x220" %>
-                </div>
+                <%= render 'status_life' %>
+                <%= render 'nicotti' %>
                 <div class='swiper-wrapper mx-auto'>
                   <div><%= image_tag 'room-2.jpeg'%></div>
                   <div><%= image_tag 'room-2.jpeg'%></div>
                 </div>
                 <div class='py-1'>
-                  <div class='words mx-auto'>
-                    <div>
-                        NICOTTI：</br>
-                      「今日もすこぶる体調がいいよ！！」</br>
-                      「目標を達成できるよう頑張ろう！」
-                    </div>
-                  </div>
+                  <%= render 'nicotti_words' %>
                 </div>
-                <buttom class='btn btn-primary btn-lg mx-auto' id="test-test">表示する</buttom>
                 <div class='pt-3'>
                   <div class='row row-cols-1 justify-content-center'>
                     <%= render 'today_smokings' %>
-                    <%= render 'smokings/smoking'%>
+                    <%= render 'smokings/smoking' %>
                     <div class='col-11'>
                       <p class='text-center'>取り消す</p>
                     </div>

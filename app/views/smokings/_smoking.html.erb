@@ -1,11 +1,5 @@
 <div class='col-11 mb-2'>  
   <div class="text-center">
-    <%= link_to smokings_path(current_user),
-                id: 'js-smoking-buttom',
-                method: :post,
-                data: {confirm: '喫煙を登録しますか？'},
-                remote: true do %>
-      <buttom class='btn btn-ippuku btn-lg mx-auto'>一服する</buttom>
-    <% end %>
+      <buttom class="btn btn-ippuku btn-lg mx-auto" id="js-smoking-buttom" data-user-id="<%= current_user.id %>" >一服する</buttom>
   </div>
 </div>
