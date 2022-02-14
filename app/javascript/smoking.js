@@ -35,6 +35,11 @@ $(document).on('turbolinks:load', function() {
           $("#modalDead").fadeIn();
           $('#closeModal , #modalBg').on('click', function(){
             $('#modalDead').fadeOut();
+
+            $.ajax({
+              url: "/users/reborn",
+              type: "GET"
+            })
           });
         }
 
