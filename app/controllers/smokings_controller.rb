@@ -1,6 +1,9 @@
 class SmokingsController < ApplicationController
 
-  def new
+  def new;end
+
+  def index
+    @smokings = current_user.per_day_smokings
   end
 
   def create

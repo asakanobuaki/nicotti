@@ -7,8 +7,8 @@ Rails.application.routes.draw do
       get :reborn
     end
   end
-  
-  resources :smokings, only: %i[create destroy]
+
+  resources :smokings, only: %i[create destroy index]
 
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
