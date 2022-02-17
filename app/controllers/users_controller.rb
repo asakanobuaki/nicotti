@@ -20,6 +20,7 @@ class UsersController < ApplicationController
 
   def index
     @today = l Date.today #デコレイター行き
+    @user = User.find(current_user.id)
   end
 
   def update

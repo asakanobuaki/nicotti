@@ -5,8 +5,28 @@
 
 .fc {
   font-size: 0.9em !important;
-  margin: 0.3em;
+  margin: 0.5em;
+  border-radius: 10px;
 }
 .fc .fc-toolbar.fc-header-toolbar {
   margin-bottom: 0.5em !important;
+}
+
+.fc-h-event .fc-event-title {
+  font-size: 20px;
+}
+
+td.fc-day-sat {
+  background-color: #eaf4ff;
+}
+td.fc-day-sun {
+  background-color: #ffeaea;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-start, .fc-direction-rtl .fc-daygrid-event.fc-event-end {
+  margin-left: 20px !important;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
+  margin-right: 17px !important;
 }

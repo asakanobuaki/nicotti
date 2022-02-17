@@ -55,6 +55,16 @@ $(document).on('turbolinks:load', function() {
                 })
               });
             }
+            else {
+              Swal.fire({
+                title: '',
+                text: `本日${todaySmoking}回目の喫煙です`,
+                icon: 'success',
+                confirmButtonText: '閉じる',
+                confirmButtonColor: '#36D2A4',
+                customClass: 'customizable'
+              })
+            }
 
             if (state == "baldness"){
 
@@ -72,6 +82,8 @@ $(document).on('turbolinks:load', function() {
 
             $("#js-remaining-number").html(`<span class='bg-warning' id='js-remaining-number' >${remaining}</span>`);
             $("#js-today-smoking").html(`<span class='bg-warning' id='js-today-smoking' >${todaySmoking}</span>`);
+
+            
             
           })
 
@@ -79,16 +91,17 @@ $(document).on('turbolinks:load', function() {
           console.log('通信に失敗しました');
         })
 
-      } else if (
-        /* Read more about handling dismissals below */
-        result.dismiss === Swal.DismissReason.cancel
-      ) {
-        Swal.fire(
-          'キャンセルしました',
-          '',
-          'error'
-        )
-      }
+      } 
+      // else if (
+      //   /* Read more about handling dismissals below */
+      //   result.dismiss === Swal.DismissReason.cancel
+      // ) {
+      //   Swal.fire(
+      //     'キャンセルしました',
+      //     '',
+      //     'error'
+      //   )
+      // }
     })
     
     

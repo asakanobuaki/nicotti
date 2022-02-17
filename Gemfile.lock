@@ -283,6 +283,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
+    simple_calendar (2.4.3)
+      rails (>= 3.0)
     sorcery (0.16.2)
       bcrypt (~> 3.1)
       oauth (~> 0.5, >= 0.5.5)
@@ -359,6 +361,7 @@ DEPENDENCIES
   rspec-rails
   rubocop-rails
   sass-rails (>= 6)
+  simple_calendar (~> 2.4)
   sorcery
   spring
   turbolinks (~> 5)

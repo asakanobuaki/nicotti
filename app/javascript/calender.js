@@ -9,7 +9,7 @@ document.addEventListener('turbolinks:load', function() {
 
     //カレンダーの中身を設定(月表示とか、クリックアクション起こしたいとか、googleCalendar使うととか)
     let calendar = new Calendar(calendarEl, {
-        plugins: [ monthGridPlugin, interactionPlugin],
+        plugins: [ monthGridPlugin, interactionPlugin, ],
 
         //細かな表示設定
         locale: 'ja',
@@ -20,9 +20,8 @@ document.addEventListener('turbolinks:load', function() {
           left: 'title',
           end: 'today prev,next' 
         },
+        navLinks: false,
         expandRows: true,
-        stickyHeaderDates: true,
-        businessHours: true,
         buttonText: {
            today: '今日'
         }, 
