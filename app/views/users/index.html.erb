@@ -2,7 +2,7 @@
 <section class='mt-3'>
   <div class='container'>
     <div class='row'>
-      <div class='col-lg-11 col-md-11 col-sm-12 mx-auto'>
+      <div class='col-lg-12 col-md-12 col-sm-12 mx-auto'>
         <div class='page-whole mx-auto'>
           <div class='row'>
             <div class='col-md-5'>
@@ -10,11 +10,22 @@
                 <div class='row justify-content-between'>
                   <div class='col-4 col-md-9'>
                     <div class='mt-3'>
-                      <%= @today %>
+                    <%= @today %>
                     </div>
                   </div>
                   <%= render 'remaining' %>
                 </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="smoking-log">
+                      <%= render partial: 'smokings/smoking', collection: @smokings %>
+                    </div>
+                    <div class="smoking-log-sm" style="display:none;">
+                      <%= render partial: 'smokings/smoking', collection: @smokings %>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
             <div class='col-md-7'>
@@ -31,9 +42,10 @@
                 <div class='pt-3'>
                   <div class='row row-cols-1 justify-content-center'>
                     <%= render 'today_smokings' %>
-                    <%= render 'smokings/smoking' %>
+                    <%= render 'smokings/smoking_buttom' %>
                     <div class='col-11'>
-                      <p class='text-center'>取り消す</p>
+                      <buttom class="btn btn-primary bt-lg" id="js-smoking-log">今日の喫煙</buttom>
+                      <%= render 'today_smoking_log' %>
                     </div>
                   </div>   
                 </div>

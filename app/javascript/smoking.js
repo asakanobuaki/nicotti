@@ -46,7 +46,7 @@ $(document).on('turbolinks:load', function() {
             }
             else if (excessCigarette == 10){
               $("#modalDead").fadeIn();
-              $('#closeModal , #modalBg').on('click', function(){
+              $('#closeModal').on('click', function(){
                 $('#modalDead').fadeOut();
 
                 $.ajax({
@@ -80,11 +80,9 @@ $(document).on('turbolinks:load', function() {
                 $(".nicotti-position-2").fadeIn();
             }
 
-            $("#js-remaining-number").html(`<span class='bg-warning' id='js-remaining-number' >${remaining}</span>`);
-            $("#js-today-smoking").html(`<span class='bg-warning' id='js-today-smoking' >${todaySmoking}</span>`);
+            $("#js-remaining-number").replaceWith(`<strong class='emphasis' id='js-remaining-number' >${remaining}</strong>`);
+            $("#js-today-smoking").replaceWith(`<strong class='emphasis' id='js-today-smoking' >${todaySmoking}</strong>`);
 
-            
-            
           })
 
         .fail(function() {

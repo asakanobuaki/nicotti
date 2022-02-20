@@ -6,6 +6,16 @@
   background-color: #36D2A4
 }
 
+.offcanvas-header .btn-close {
+  font-size: 15px;
+}
+
+.offcanvas-header{
+  color: #FFFFFF;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .list-group {
   background-color: #36D2A4
 }
@@ -14,6 +24,43 @@
   width: 160px;
 }
 
+.offcanvas-body {
+  padding: 0rem 0rem !important;
+}
+
 .sidebar-toggle {
   border: #FFFFFF;
+}
+
+.sidebarMenuInner{
+  margin:0;
+  padding:0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+  list-style: none;
+  color: #fff;
+  text-transform: uppercase;
+  // font-weight: bold;
+  padding: 14px;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(255 255 255 / 15%);
+}
+
+.sidebarMenuInner li:hover{
+  background-color: #30b88f;
+}
+
+.sidebarMenuInner li span{
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a{
+  color: #fff;
+  text-transform: uppercase;
+  // font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
 }

@@ -21,6 +21,7 @@ class UsersController < ApplicationController
   def index
     @today = l Date.today #デコレイター行き
     @user = User.find(current_user.id)
+    @smokings = current_user.smokings.where(created_at: Date.today.all_day)
   end
 
   def update

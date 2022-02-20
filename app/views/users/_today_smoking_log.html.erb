@@ -1,0 +1,12 @@
+<section id="modalSmokingLog" class="modalArea"  >
+  <div id="modalBg" class="modalBg"></div>
+  <div class="modalWrapper">
+    <div class="modalContents">
+      <h4>本日の喫煙</h4>
+      <%= render partial: 'smokings/smoking', collection: @smokings %>
+    </div>
+    <div id="closeModal" class="closeModal">
+      ×
+    </div>
+  </div>
+</section>

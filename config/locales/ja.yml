@@ -39,9 +39,9 @@ ja:
     - 金曜日
     - 土曜日
     formats:
-      default: "%Y/%m/%d"
+      default: "%Y/%m/%d(%a)"
       long: "%Y年%m月%d日(%a)"
-      short: "%m/%d"
+      short: "%m/%d %H:%M"
     month_names:
     - 
     - 1月
