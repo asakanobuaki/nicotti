@@ -1,3 +1,141 @@
+<section class="top1">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-auto text-center">
+        <h2 class="text-size">NICOTTI</h2>
+        <h5 class="text-family">育成型喫煙管理アプリ</h5>
+        <p class="mt-2">
+        <%= link_to login_path do%>
+          <buttom class="btn header-button btn-lg mx-auto" >ログイン</buttom>
+        <% end %>
+        </p>
+        <p>
+        <%= link_to new_user_path do%>
+          <buttom class="btn header-button btn-lg mx-auto" >新規登録</buttom>
+        <% end %>
+        </p>
+      </div>
+      <div class="col-8 col-md-auto text-center">
+        <%= image_tag "piyopiyo.gif", :size =>'180x200'%>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="b-example-divider"></div>
+
+<div class="container">
+  <h2 class="my-4 text-center border-bottom">NICOTTIでできること</h2>
+  <div class="row py-1 justify-content-center mb-3">
+    <div class="col-11 col-lg-7 col-xl-6 pl-lg-3 pl-xl-5 align-self-center">
+        <h2 class="mb-4 text-success">ゲーム感覚で喫煙を管理</h2>
+        <h5 class="font-weight-light">目標本数を超えた喫煙をするとニコッチの体調が悪化していくので、自分の健康を可視化して管理できる</h5>
+    </div>
+    <div class="col-11 col-lg-5 col-xl-6 text-center align-self-center">
+        <%= image_tag 'modal_hage.png', style: "max-width: 100%; height: auto"%>
+    </div>
+  </div>
+
+
+  <div class="row py-1 justify-content-center mb-3">
+    <div class="col-11 col-lg-5 col-xl-6 text-center align-self-center  order-2 order-lg-1">
+      <%= image_tag 'top-kanri.png', style: "max-width: 100%; height: auto"%>
+    </div>
+    <div class="col-11 col-lg-7 col-xl-6 pl-lg-3 pl-xl-5 align-self-center  order-1 order-lg-2">
+        <h2 class="mb-4 text-success">時間単位の記録</h2>
+        <h5 class="font-weight-light">1日ごとの喫煙時間まで記録されるので、喫煙の誘惑が多い時間帯が一眼でわかる！</h5>
+    </div>
+  </div>
+
+  <div class="row py-1 justify-content-center mb-3">
+    <div class="col-11 col-lg-7 col-xl-6 pl-lg-3 pl-xl-5 align-self-center">
+        <h2 class="mb-4 text-success"></h2>
+        <h5 class="font-weight-light">目標本数を超えた喫煙をするとニコッチの体調が悪化していくので、自分の健康を可視化して管理できる</h5>
+    </div>
+    <div class="col-11 col-lg-5 col-xl-6 text-center align-self-center">
+        <%= image_tag 'modal_hage.png', style: "max-width: 100%; height: auto"%>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="top2">
+  <div class="container px-4 py-5">
+    <div class="text-center">
+      <h1>タバコを管理してニコッチを育てよう</h1>
+      <h3></h3>
+    </div>
+      <h2 class="pb-2 text-center border-bottom">NICOTTIでできること</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col">
+          <div class="features2">
+            <div class="resizeimage">
+              <%= image_tag 'registration.png', size: "344x200" %>
+            </div>
+            <h4 class="mt-4">1日の目標喫煙本数を決める</h4>
+            <p>新規登録の際に1日の目標喫煙本数を決めます。この本数を基準としてにこっちのステータスが変化していきます。（この本数は後からでも変更できます。）</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="features2">
+            <div class="icon bg-primary bg-gradient">
+            </div>
+            <h2>喫煙を登録する</h2>
+            <p>喫煙の際に「一服する」ボタンを押すと、喫煙が登録されニコッチのステータスが変更されます。ステータスの変更は、登録した目標喫煙本数を超過した本数に応じて変化します。</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="features2">
+            <div class="icon bg-primary bg-gradient">
+            </div>
+            <h2>Featured title</h2>
+            <p>Paragraph of text beneath the heading to explain the heading. Well add onto it with another sentence and probably just keep going until we run out of words.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+  <div class="b-example-divider"></div>
+
+<div class="container px-4 py-5">
+    <h2 class="pb-2 border-bottom">NICOTTIの使い方</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-md-3 row-cols-lg-3">
+      <div class="col">
+        <div class="features">
+          <div class="resizeimage">
+            <%= image_tag 'registration.png'%>
+          </div>
+          <h4 class="mt-4">1日の目標喫煙本数を決める</h4>
+          <p>新規登録の際に1日の目標喫煙本数を決めます。この本数を基準としてにこっちのステータスが変化していきます。（この本数は後からでも変更できます。）</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="features">
+          <div class="icon bg-primary bg-gradient">
+          </div>
+          <h2>喫煙を登録する</h2>
+          <p>喫煙の際に「一服する」ボタンを押すと、喫煙が登録されニコッチのステータスが変更されます。ステータスの変更は、登録した目標喫煙本数を超過した本数に応じて変化します。</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="features">
+          <div class="icon bg-primary bg-gradient">
+          </div>
+          <h2>Featured title</h2>
+          <p>Paragraph of text beneath the heading to explain the heading. Well add onto it with another sentence and probably just keep going until we run out of words.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider"></div>
+
+
+
+
 <p>新感覚育成形喫煙管理アプリ</p>
 <h1>Nicotti</h1>
 <div>

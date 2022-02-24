@@ -2,26 +2,26 @@
 
 <% if current_user.healthy? %>
   <div class='nicotti-position'>
-    <%= image_tag 'nicotti-healthy.png', :size =>"140x220" %>
+    <%= image_tag 'piyopiyo.gif', :size =>"140x170" %>
   </div>
 <% elsif current_user.baldness? %>
   <div class='nicotti-position-1'>
-    <%= image_tag 'sick_panic_man.png', :size =>"180x220" %>
+    <%= image_tag 'hagepiyo.png', :size =>"160x200" %>
   </div>
 <% elsif current_user.cancer? %>
   <div class='nicotti-position-2'>
-    <%= image_tag 'cancer_man.png', :size =>"160x200" %>
+    <%= image_tag 'nekomu.png', :size =>"200x245" %>
   </div>
 <% end %>
 
   <div class='nicotti-position' style="display:none;">
-    <%= image_tag 'nicotti-healthy.png', :size =>"140x220" %>
+    <%= image_tag 'piyopiyo.gif', :size =>"140x170" %>
   </div>
 
   <div class='nicotti-position-1' style="display:none;">
-    <%= image_tag 'sick_panic_man.png', :size =>"180x220" %>
+    <%= image_tag 'hagepiyo.png', :size =>"160x200" %>
   </div>
 
   <div class='nicotti-position-2' style="display:none;">
-    <%= image_tag 'cancer_man.png', :size =>"160x200" %>
+    <%= image_tag 'nekomu.png', :size =>"200x245" %>
   </div>

@@ -24,4 +24,11 @@ class User < ApplicationRecord
   def today_smokings
     self.smokings.where(created_at: Date.today.all_day).count
   end
+
+  def reset_life
+    self.excess_cigarette = 0
+    self.life += 1
+    self.healthy!
+  end
+
 end

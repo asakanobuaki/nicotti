@@ -1,21 +1,23 @@
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
-    <h5 id="offcanvasRightLabel">メニュー</h5>
+    <div id="offcanvasRightLabel">メニュー</div>
     <hr>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <% if logged_in? %>
-      <div class="my-3">
-        <%= link_to "ユーザー編集", edit_user_path(current_user.id), class: 'btn btn-sm header-button mx-1' %>
-      </div>
-      <div class="my-3" >
-        <%= link_to "ログアウト", :logout, method: :post, class: 'btn btn-sm header-button mx-1' %>
-      </div>
-    <% else %>
-        <%= link_to "ユーザー登録", new_user_path, class: 'btn btn-sm header-button mx-1' %>
-        <%= link_to "ログイン", :login, class: 'btn btn-sm header-button mx-1' %>
-    <% end %>
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <% if logged_in? %>
+          <li class="text-left"><i class="fas fa-home fa-lg"></i><%= link_to '  ホーム', users_path %></li>
+          <li class="text-left"><i class="fas fa-user fa-lg"></i><%= link_to "  #{current_user.name}", user_path(current_user) %></li>
+          <li class="text-left"><i class="fas fa-calendar fa-lg"></i><%= link_to "  カレンダー ", smokings_path %></li>
+          <li class="text-left"><i class="fas fa-sign-out-alt fa-lg"></i><%= link_to '  ログアウト', logout_path, method: :post %></li>
+        <% else %>
+          <li class="text-left"><i class="fas fa-user fa-lg"></i><%= link_to "  新規登録", new_user_path %></li>
+          <li class="text-left"><i class="fas fa-sign-in fa-lg"></i><%= link_to "  ログイン", :login %></li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

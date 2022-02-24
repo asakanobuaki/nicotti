@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path, success: 'ユーザーを作成しました'
+      redirect_to users_path, success: 'ユーザーを作成しました'
     else
       render :new
     end
@@ -20,6 +20,8 @@ class UsersController < ApplicationController
 
   def index
     @today = l Date.today #デコレイター行き
+    @user = User.find(current_user.id)
+    @smokings = current_user.smokings.where(created_at: Date.today.all_day)
   end
 
   def update
@@ -40,6 +42,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.destroy!
     redirect_to root_path, info: 'ユーザーを削除しました。'
+  end
+
+  def reborn
+    @user = User.find(current_user.id)
+    @user.reset_life
+    @user.save
+    redirect_to users_path
   end
 
 
