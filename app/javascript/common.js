@@ -5,9 +5,9 @@ $(function(){
 $(document).on('turbolinks:load', function() {
 
   $("#js-smoking-log").on('click',function(){
-    $("#modalSmokingLog").fadeIn();
+    $("#modalSmokingLog").slideToggle(500);
     $('#closeModal , #modalBg').on('click', function(){
-      $('#modalSmokingLog').fadeOut();
+      $('#modalSmokingLog').slideUp(500);
     });
   });
 

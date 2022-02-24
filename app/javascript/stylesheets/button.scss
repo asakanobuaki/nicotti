@@ -33,7 +33,7 @@
 
 .btn-ippuku {
   padding: 0.3em 1em;
-  border: solid 2px #11b684;
+  border: solid 2px #36D2A4;
   border-radius: 10px;
   color: #FFFFFF;
   background-color: #36D2A4;
@@ -57,4 +57,16 @@
   color: #fff;
   background-color: #41b17d;
   border-color: #41b17d;
+}
+
+.today-smoking-buttom {
+  width: 96px;
+  font-size: 14px;
+  background-color: #de7676;
+  color: #FFFFFF;
+}
+
+.today-smoking-buttom:hover {
+  background-color: #d85151;
+  color: #FFFFFF;
 }

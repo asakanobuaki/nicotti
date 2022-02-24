@@ -23,10 +23,40 @@ td.fc-day-sun {
   background-color: #ffeaea;
 }
 
-.fc-direction-ltr .fc-daygrid-event.fc-event-start, .fc-direction-rtl .fc-daygrid-event.fc-event-end {
-  margin-left: 20px !important;
+// .fc-direction-ltr .fc-daygrid-event.fc-event-start, .fc-direction-rtl .fc-daygrid-event.fc-event-end {
+//   margin-left: 20px !important;
+// }
+
+// .fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
+//   margin-right: 17px !important;
+// }
+
+.fc .fc-button {
+  font-size: 0.9em !important;
 }
 
-.fc-direction-ltr .fc-daygrid-event.fc-event-end, .fc-direction-rtl .fc-daygrid-event.fc-event-start {
-  margin-right: 17px !important;
+.fc a[data-navlink] {
+  color: #464f57;
+  text-decoration: none;
 }
+.fc .fc-col-header-cell-cushion {
+  color: #464f57;
+  text-decoration: none;
+}
+
+.fc-daygrid-dot-event {
+  display: none !important;
+}
+
+
+.fullContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 20px 40px;
+}
+// .fc-theme-standard th {
+//   height: 30px !important;
+// }

@@ -1,9 +1,17 @@
 <div class='words mx-auto'>
   <div>
     <strong>NICOTTI：</strong>
-    <div>
-    「今日もすこぶる体調がいいよ！！」</br>
-    「目標を達成できるよう頑張ろう！」
+    <div id="js-nicotti-words">
+      <% if current_user.healthy? %>
+        「今日もすこぶる体調がいいよ！！」</br>
+        「目標を達成できるよう頑張ろう！」
+      <% elsif current_user.baldness? %>
+        「なんだか気分が悪いな(;o;)」</br>
+        「君も体調には気をつけてね、、」
+      <% elsif current_user.cancer? %>
+        「もうだめかもしれない」</br>
+        「でももっと長く生きたいよう。。」
+      <% end %>
     </div>
   </div>
 </div>

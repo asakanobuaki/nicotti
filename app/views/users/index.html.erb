@@ -18,7 +18,7 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="smoking-log">
-                      <%= render partial: 'smokings/smoking', collection: @smokings %>
+                        <%= render partial: 'smokings/smoking', collection: @smokings %>
                     </div>
                     <div class="smoking-log-sm" style="display:none;">
                       <%= render partial: 'smokings/smoking', collection: @smokings %>
@@ -43,9 +43,9 @@
                   <div class='row row-cols-1 justify-content-center'>
                     <%= render 'today_smokings' %>
                     <%= render 'smokings/smoking_buttom' %>
+                    <buttom class="btn today-smoking-buttom" id="js-smoking-log">今日の喫煙</buttom>
                     <div class='col-11'>
-                      <buttom class="btn btn-primary bt-lg" id="js-smoking-log">今日の喫煙</buttom>
-                      <%= render 'today_smoking_log' %>
+                      <%= render 'today_smoking_log', {smokings: @smokings} %>
                     </div>
                   </div>   
                 </div>
