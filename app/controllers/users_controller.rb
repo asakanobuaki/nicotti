@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       auto_login(@user)
       redirect_to users_path, success: 'ユーザーを作成しました'
     else
+      flash.now[:error] = 'ユーザーを作成できませんでした'
       render :new
     end
   end
