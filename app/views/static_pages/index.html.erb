@@ -1,4 +1,4 @@
-<section class="top1">
+<section class="top1 align-items-center d-flex">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-auto text-center">
@@ -22,17 +22,15 @@
   </div>
 </section>
 
-<div class="b-example-divider"></div>
-
-<div class="container">
-  <h2 class="my-4 text-center border-bottom">NICOTTIでできること</h2>
+<div class="container my-5">
+  <h2 class="my-4 border-bottom">NICOTTIでできること</h2>
   <div class="row py-1 justify-content-center mb-3">
     <div class="col-11 col-lg-7 col-xl-6 pl-lg-3 pl-xl-5 align-self-center">
         <h2 class="mb-4 text-success">ゲーム感覚で喫煙を管理</h2>
         <h5 class="font-weight-light">目標本数を超えた喫煙をするとニコッチの体調が悪化していくので、自分の健康を可視化して管理できる</h5>
     </div>
     <div class="col-11 col-lg-5 col-xl-6 text-center align-self-center">
-        <%= image_tag 'modal_hage.png', style: "max-width: 100%; height: auto"%>
+        <%= image_tag 'top-top1.png', style: "max-width: 100%; height: auto"%>
     </div>
   </div>
 
@@ -63,89 +61,82 @@
 
 <div class="top2">
   <div class="container px-4 py-5">
-    <div class="text-center">
-      <h1>タバコを管理してニコッチを育てよう</h1>
-      <h3></h3>
-    </div>
-      <h2 class="pb-2 text-center border-bottom">NICOTTIでできること</h2>
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <h2 class="pb-2 border-bottom">NICOTTIのはじめ方</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-md-3">
         <div class="col">
-          <div class="features2">
-            <div class="resizeimage">
-              <%= image_tag 'registration.png', size: "344x200" %>
+          <div class="features">
+            <div class="col-img d-flex align-items-center justify-content-center">
+              <%= image_tag 'top-smo.png', style: "max-height: 100%; max-width: 100%;" %>
             </div>
-            <h4 class="mt-4">1日の目標喫煙本数を決める</h4>
+            <h4 class="mt-4">1日の目標本数を指定</h4>
             <p>新規登録の際に1日の目標喫煙本数を決めます。この本数を基準としてにこっちのステータスが変化していきます。（この本数は後からでも変更できます。）</p>
           </div>
         </div>
         <div class="col">
-          <div class="features2">
-            <div class="icon bg-primary bg-gradient">
+          <div class="features">
+            <div class="col-img d-flex align-items-center justify-content-center">
+              <%= image_tag 'smoking_buttom.png', style: "max-height: 100%; max-width: 100%;"%>
             </div>
-            <h2>喫煙を登録する</h2>
-            <p>喫煙の際に「一服する」ボタンを押すと、喫煙が登録されニコッチのステータスが変更されます。ステータスの変更は、登録した目標喫煙本数を超過した本数に応じて変化します。</p>
+            <h4 class="mt-4">喫煙を登録する</h4>
+            <p>「一服する」ボタンを押すと喫煙が登録されます。目標の本数を超えるとニコッチのステータスが変化していきます。</p>
           </div>
         </div>
         <div class="col">
-          <div class="features2">
-            <div class="icon bg-primary bg-gradient">
+          <div class="features">
+            <div class="col-img d-flex align-items-center justify-content-center">
+              <%= image_tag 'mesarepiyo.png', :size =>"177x150"%>
             </div>
-            <h2>Featured title</h2>
-            <p>Paragraph of text beneath the heading to explain the heading. Well add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <h4 class="mt-4">ニコッチを思いやる</h4>
+            <p>決めた目標を破り続けるとニコッチは死んでしまいます。ニコッチを死なせないように、思いやりを持ってタバコを吸ってください。</p>
           </div>
         </div>
       </div>
   </div>
 </div>
-
-  <div class="b-example-divider"></div>
 
 <div class="container px-4 py-5">
-    <h2 class="pb-2 border-bottom">NICOTTIの使い方</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-md-3 row-cols-lg-3">
+<h2 class="pb-2 border-bottom">NICOTTIの健康状態</h2>
+  <div class="row row-cols-1 row-cols-sm-3 g-4 my-4">
       <div class="col">
-        <div class="features">
-          <div class="resizeimage">
-            <%= image_tag 'registration.png'%>
-          </div>
-          <h4 class="mt-4">1日の目標喫煙本数を決める</h4>
-          <p>新規登録の際に1日の目標喫煙本数を決めます。この本数を基準としてにこっちのステータスが変化していきます。（この本数は後からでも変更できます。）</p>
+        <div class="card">
+          <%= image_tag 'card-healthy.png', class: "card-img-top" %>
+            <div class="card-body">
+                <h5 class="card-title">ステータス：健康</h5>
+                <p class="card-text">目標を守れていれば、ニコッチはずっと健康です。この状態をキープできるよう頑張ろう！</p>
+            </div>
         </div>
       </div>
       <div class="col">
-        <div class="features">
-          <div class="icon bg-primary bg-gradient">
-          </div>
-          <h2>喫煙を登録する</h2>
-          <p>喫煙の際に「一服する」ボタンを押すと、喫煙が登録されニコッチのステータスが変更されます。ステータスの変更は、登録した目標喫煙本数を超過した本数に応じて変化します。</p>
+        <div class="card">
+          <%= image_tag 'card-hage.png', class: "card-img-top" %>
+            <div class="card-body">
+                <h5 class="card-title">ステータス：ハゲ</h5>
+                <p class="card-text">目標を超えた本数が合計６本に達すると、ニコッチは禿げてきます。</p>
+            </div>
         </div>
       </div>
       <div class="col">
-        <div class="features">
-          <div class="icon bg-primary bg-gradient">
-          </div>
-          <h2>Featured title</h2>
-          <p>Paragraph of text beneath the heading to explain the heading. Well add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <div class="card">
+          <%= image_tag 'card-cancer.png', class: "card-img-top" %> 
+            <div class="card-body">
+                <h5 class="card-title">ステータス：がん</h5>
+                <p class="card-text">目標を超えた本数が８本に達すると、ニコッチは「がん」になります。もう少しで死んでしまう状態なので気をつけよう。</p>
+            </div>
         </div>
       </div>
-    </div>
   </div>
-
-  <div class="b-example-divider"></div>
-
-
-
-
-<p>新感覚育成形喫煙管理アプリ</p>
-<h1>Nicotti</h1>
-<div>
-  <p>このアプリは、自身に見立てたキャラクターがあなたの代わりとなって、あなたが喫煙するたびに病気に近づいていくアプリです</p>
 </div>
 
-<div>
-  <p>このアプリの使い方</p>
-  <p>1日の目標となる喫煙本数を決めます</p>
-  <p>その目標本数を基準として、目標を超過した分だけキャラクターが死に近づいていきます</p>
-  <p>ある一定数、超過した時点でキャラクターが死に、２回目の人生が始まります</p>
+<div class="top-end">
+    <div class="text-center my-4">
+      <h2>ニコッチで健康な未来を手に入れよう！！</h2>
+    </div> 
+    <div class="text-center">
+      <%= image_tag 'top-end.png', size: '350x350'%>
+    </div>
+    <div class="text-center">
+      <a href='/users/new' class="btn top-new-button mx-2 my-1">登録して始める</a>
+      <a href='#' class="btn top-new-button mx-2 my-1">登録なしで体験する</a>
+    </div>
 </div>
-  
+

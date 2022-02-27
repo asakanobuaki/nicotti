@@ -15,6 +15,23 @@
   color: #FFFFFF;
 }
 
+.top-new-button{
+  padding: 0.3em 1em;
+  border: solid 2px #36D2A4;
+  border-radius: 5px;
+  color: #36D2A4;
+  background-color: #FFFFFF;
+  transition: 0.3s;
+  font-weight: 600;
+  width: 250px;
+}
+
+.top-new-button:hover {
+  background-color: #36D2A4;
+  border: solid 2px #FFFFFF;
+  color: #FFFFFF;
+}
+
 .login-button {
   padding: 0.3em 1em;
   border: solid 2px #FFFFFF;

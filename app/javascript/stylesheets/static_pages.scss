@@ -1,13 +1,22 @@
 .top1 {
   padding: 9rem 1.5rem;
+  min-height: 600px;
+  background-color: #e2fff7;
 }
 .top2{
-  background-color: #FFFFFF;
+  background-color: #e2fff7;
 }
 
-.resizeimage img { 
-  width: 100%; 
+.top-end {
+  height: 600px;
+}
 
+.top-end-container {
+  height: 100%;
+}
+
+.col-img {
+ height: 200px;
 }
 
 .b-example-divider {
@@ -22,10 +31,22 @@
   background-color: white;
   border-radius: 50px;
   padding: 25px;
+  min-height: 100%;
 }
 
 .features2 {
   background-color: #d5fff2;
   border-radius: 50px;
   padding: 25px;
+  min-height: 100%;
+}
+
+.card {
+  min-height: 100%;
+}
+
+@media (min-width: 1400px){
+.container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+  max-width: 1140px;
+}
 }
