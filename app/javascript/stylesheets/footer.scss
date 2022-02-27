@@ -1,0 +1,26 @@
+footer.page-footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  color: #FFF;
+  background-color: #36D2A4;
+  height: 56px;
+  font-size: 15px;
+}
+
+.footer-text{
+  color: #FFF;
+}
+
+.footer-text:hover{
+  color: rgb(10, 160, 85);
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-mute {
+  color: rgba(78, 78, 78, 0.623);
+}
