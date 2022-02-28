@@ -58,12 +58,6 @@ $(document).on('turbolinks:load', function() {
 
               $(".nicotti-position-1, .nicotti-position-2").fadeOut();
                 $(".nicotti-position").fadeIn();
-
-                // ニコッチ蘇りメソッド
-                $.ajax({
-                  url: "/users/reborn",
-                  type: "GET"
-                })
               });
             }
             else {

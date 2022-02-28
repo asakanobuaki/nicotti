@@ -62,3 +62,48 @@
 .accent {
   color: red;
 }
+
+.modal-dis {
+  border: 1px solid #3788d8;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.modal-button{
+  padding: 0.5em 1em;
+  border: solid 2px #ffc107;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #ffc107;
+  transition: 0.3s;
+  font-weight: 600;
+  width: 90px;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.modal-button1{
+  padding: 0.5em 1em;
+  border: solid 2px #ffc107;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: #ffc107;
+  transition: 0.3s;
+  font-weight: 600;
+  width: 180px;
+  box-shadow: 2px 2px 4px gray;
+}
+
+.modal-button:hover {
+  background-color: #FFF;
+  border: solid 2px #ffc107;
+  color: #ffc107;
+  box-shadow: 0px;
+}
+
+.modal-button1:hover {
+  background-color: #FFF;
+  border: solid 2px #ffc107;
+  color: #ffc107;
+  box-shadow: 0px;
+}

@@ -3,19 +3,23 @@
   <div class="modalWrapper">
         <div class="modalContents">
           <h5 class='text-center'>
-          <strong class="mark">毛が抜け始めました</strong>
+            <strong class="mark">毛が抜け始めました</strong>
           </h5>
           <div class='text-center'>
-            <%= image_tag 'modal_hage.png', :size =>"200x160" %>
+            <%= image_tag 'hagepiyo.gif', :size =>"160x160" %>
           </div>
           <div class="modal-status">
             ステータス：　健康　→ <strong class="accent">ハゲ</strong>
           </div>
-          <div class="modal-status">
+          <div class="modal-status my-1">
             次のステータスまで：<strong class="accent">超過２本</strong>
           </div>
-          <div>あと、<strong class="accent">2本</strong>目標を超過すると次の病気にかかります</div>
-          <p>過度な喫煙をすると、頭皮の血液循環が悪くなり育つはずの毛が育たなかったり、抜け落ちたりしてしまします。結果としてニコッチはハゲました。</p>
+          <p style="font-size: 12px;">↑※1日の目標を超過した本数</p>
+          <div>あと、<strong class="accent">2本</strong>目標を超過して喫煙すると次の病気にかかります。</div>
+          <div class="modal-dis mt-2 ">過度な喫煙をすると、頭皮の血液循環が悪くなり育つはずの毛が育たなかったり、抜け落ちたりしてしまします。結果としてニコッチはハゲました。</div>
+        </div>
+        <div id="closeModal" class="text-center my-3">
+            <button class="modal-button">とじる</button>
         </div>
     <div id="closeModal" class="closeModal">
       ×
