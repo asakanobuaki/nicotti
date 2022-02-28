@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, success: 'ユーザー情報を更新しました。'
     else
-      flash[:danger] = '更新に失敗しました。'
+      flash[:error] = '更新に失敗しました。'
       render :edit
     end
   end
