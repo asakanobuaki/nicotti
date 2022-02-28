@@ -48,10 +48,16 @@ $(document).on('turbolinks:load', function() {
                 $('#modalCancer').fadeOut();
               });
             }
-            else if (excessCigarette == 10){
+            else if (excessCigarette == 0){
               $("#modalDead").fadeIn();
               $('#closeModal').on('click', function(){
                 $('#modalDead').fadeOut();
+
+              $("#js-status").html("<div class='status-text'>ステータス：健康</div>");
+              $("#js-nicotti-words").html("<div>「今日もすこぶる体調がいいよ！！」</br>「「目標を達成できるよう頑張ろう！」</div>");
+
+              $(".nicotti-position-1, .nicotti-position-2").fadeOut();
+                $(".nicotti-position").fadeIn();
 
                 // ニコッチ蘇りメソッド
                 $.ajax({

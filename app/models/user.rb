@@ -30,6 +30,7 @@ class User < ApplicationRecord
     self.excess_cigarette = 0
     self.life += 1
     self.healthy!
+    self.save
   end
 
 end

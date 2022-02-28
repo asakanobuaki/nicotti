@@ -47,9 +47,6 @@ class UsersController < ApplicationController
   end
 
   def reborn
-    @user = User.find(current_user.id)
-    @user.reset_life
-    @user.save
     redirect_to users_path
   end
 

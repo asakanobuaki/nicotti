@@ -22,6 +22,8 @@ class SmokingsController < ApplicationController
         @user.baldness!
       elsif @user.excess_cigarette == 8
         @user.cancer!
+      elsif @user.excess_cigarette == 10
+        @user.reset_life
       end
     end
 
