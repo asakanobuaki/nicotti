@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   authenticates_with_sorcery!
 
-  has_many :smokings
-  has_many :per_day_smokings
+  has_many :smokings, dependent: :destroy
+  has_many :per_day_smokings, dependent: :destroy
 
   validates :password, length: { minimum: 3 }, if: -> { new_record? || changes[:crypted_password] }
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }
@@ -14,8 +14,10 @@ class User < ApplicationRecord
   validates :target_number, presence: true
   validates :state, presence: true
   validates :life, presence: true
+  validates :role, presence: true
 
   enum state: { healthy: 0, baldness: 1, cancer: 2 }
+  enum role: { general: 0, admin: 10, guest: 20 }
 
   # 本日の残り喫煙本数(これは画面に表示する内容なのでデコレイターに書くべきなのか？)
   def remaining_number
@@ -30,6 +32,7 @@ class User < ApplicationRecord
     self.excess_cigarette = 0
     self.life += 1
     self.healthy!
+    self.save
   end
 
 end

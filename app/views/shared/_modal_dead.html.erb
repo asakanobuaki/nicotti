@@ -2,17 +2,33 @@
   <div id="modalBg" class="modalBg"></div>
   <div class="modalWrapper">
       <div class="modalContents">
-        <h5 class='text-center'>ニコッチが亡くなりました</h5>
+        <h5 class='text-center'>
+          <strong class="mark">ニコッチが亡くなりました</strong>
+        </h5>
         <div class='text-center'>
-          <%= image_tag 'mesarepiyo.png', :size =>"180x220" %>
+          <%= image_tag 'mesarepiyo.png', :size =>"180x180" %>
         </div>
-        <p>無理な禁煙はストレスが溜まり身体に害です。</p>
-        <p>しかしタバコの吸い過ぎも身体に害です。</p>
+        <div>目標を超過した喫煙が１０本に達しました。</div>
+        <p>ニコッチは次の人生を歩みはじめます。</p>
+        <div class="modal-status">
+            ステータス：　がん　→　<strong class="accent">健康</strong>
+        </div>
+        <div class="modal-status my-1">
+          人生回数　：　<%=current_user.life%>回　→　<strong class="accent"><%=current_user.life+1%>回</strong>
+        </div>
+        <p style="font-size: 12px;">↑※ステータスがリセットされます</p>
+        <div　>無理な禁煙はストレスが溜まり身体に害です。</div>
+        <div>しかし、タバコの吸い過ぎも身体に害です。</div>
         <p>ニコッチはこれから蘇りますがあなたの身体は死んでも蘇りません。</p>
-        <p>今一度、喫煙習慣を見直してニコッチとやり直しましょう！</p>
+        <p><strong>今一度、喫煙習慣を見直してニコッチとやり直しましょう！</strong></p>
+        <div id="closeModal" class="text-center my-2">
+          <%= link_to users_path do %>
+            <button class="modal-button1">次の人生を歩む</button>
+          <% end %>
+        </div>
       </div>
     <div id="closeModal" class="closeModal">
-      <%= link_to '×', reborn_users_path %>
+      <%= link_to '×', users_path %>
     </div>
   </div>
 </section>

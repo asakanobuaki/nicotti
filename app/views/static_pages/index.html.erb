@@ -14,6 +14,11 @@
           <buttom class="btn header-button btn-lg mx-auto" >新規登録</buttom>
         <% end %>
         </p>
+        <p>
+        <%= link_to guest_login_path do%>
+          <buttom class="btn header-button btn-lg mx-auto" >ゲストログイン</buttom>
+        <% end %>
+        </p>
       </div>
       <div class="col-8 col-md-auto text-center">
         <%= image_tag "piyopiyo.gif", :size =>'180x200'%>
@@ -98,7 +103,7 @@
 <h2 class="pb-2 border-bottom">NICOTTIの健康状態</h2>
   <div class="row row-cols-1 row-cols-sm-3 g-4 my-4">
       <div class="col">
-        <div class="card">
+        <div class="card top-card">
           <%= image_tag 'card-healthy.png', class: "card-img-top" %>
             <div class="card-body">
                 <h5 class="card-title">ステータス：健康</h5>
@@ -107,7 +112,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card top-card">
           <%= image_tag 'card-hage.png', class: "card-img-top" %>
             <div class="card-body">
                 <h5 class="card-title">ステータス：ハゲ</h5>
@@ -116,7 +121,7 @@
         </div>
       </div>
       <div class="col">
-        <div class="card">
+        <div class="card top-card">
           <%= image_tag 'card-cancer.png', class: "card-img-top" %> 
             <div class="card-body">
                 <h5 class="card-title">ステータス：がん</h5>

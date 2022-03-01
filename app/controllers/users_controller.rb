@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, success: 'ユーザー情報を更新しました。'
     else
-      flash[:danger] = '更新に失敗しました。'
+      flash[:error] = '更新に失敗しました。'
       render :edit
     end
   end
@@ -45,14 +45,6 @@ class UsersController < ApplicationController
     @user.destroy!
     redirect_to root_path, info: 'ユーザーを削除しました。'
   end
-
-  def reborn
-    @user = User.find(current_user.id)
-    @user.reset_life
-    @user.save
-    redirect_to users_path
-  end
-
 
   private
     def user_params
