@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root 'static_pages#index'
+  get 'terms', to: 'static_pages#terms'
+  get 'privacy', to: 'static_pages#privacy'
 
   resources :users
   
