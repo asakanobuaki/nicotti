@@ -12,6 +12,7 @@ class SmokingsController < ApplicationController
     @smoking.save!
     
     @user = User.find(current_user.id)
+    reborn = false
 
     if current_user.smokings.where(created_at: Date.today.all_day).count > current_user.target_number
       @user.excess_cigarette += 1
@@ -24,6 +25,7 @@ class SmokingsController < ApplicationController
         @user.cancer!
       elsif @user.excess_cigarette == 10
         @user.reset_life
+        reborn = true
       end
     end
 
@@ -41,6 +43,7 @@ class SmokingsController < ApplicationController
                     state: @user.state,
                     user_smoking: user_smoking,
                     remianing_smoking: remianing_smoking,
+                    reborn: reborn,
                     html: partial
                   }
       }
