@@ -5,12 +5,17 @@
         <h2 class="text-size">NICOTTI</h2>
         <h5 class="text-family">育成型喫煙管理アプリ</h5>
         <% if logged_in? %>
+          <p class="mt-5">
+          <%= link_to users_path do%>
+            <buttom class="btn header-button btn-lg mx-auto" >ホームに戻る</buttom>
+          <% end %>
+          </p>
+        <% else %>
           <p class="mt-2">
           <%= link_to login_path do%>
             <buttom class="btn header-button btn-lg mx-auto" >ログイン</buttom>
           <% end %>
           </p>
-        <% else %>
           <p>
           <%= link_to new_user_path do%>
             <buttom class="btn header-button btn-lg mx-auto" >新規登録</buttom>
@@ -52,20 +57,7 @@
         <h5 class="font-weight-light">1日ごとの喫煙時間まで記録されるので、喫煙の誘惑が多い時間帯が一眼でわかる！</h5>
     </div>
   </div>
-
-  <div class="row py-1 justify-content-center mb-3">
-    <div class="col-11 col-lg-7 col-xl-6 pl-lg-3 pl-xl-5 align-self-center">
-        <h2 class="mb-4 text-success"></h2>
-        <h5 class="font-weight-light">目標本数を超えた喫煙をするとニコッチの体調が悪化していくので、自分の健康を可視化して管理できる</h5>
-    </div>
-    <div class="col-11 col-lg-5 col-xl-6 text-center align-self-center">
-        <%= image_tag 'modal_hage.png', style: "max-width: 100%; height: auto"%>
-    </div>
-  </div>
-
-
 </div>
-
 
 <div class="top2">
   <div class="container px-4 py-5">
@@ -144,7 +136,7 @@
     </div>
     <div class="text-center">
       <a href='/users/new' class="btn top-new-button mx-2 my-1">登録して始める</a>
-      <a href='#' class="btn top-new-button mx-2 my-1">登録なしで体験する</a>
+      <a href='/guest_login' class="btn top-new-button mx-2 my-1">登録なしで体験する</a>
     </div>
 </div>
 
