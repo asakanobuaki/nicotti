@@ -35,6 +35,9 @@ gem 'sorcery'
 # Model
 gem 'enum_help'
 
+#　環境変数管理
+gem 'dotenv-rails', groups: [:development, :production]
+
 # 定期実行
 gem 'whenever', require: false
 

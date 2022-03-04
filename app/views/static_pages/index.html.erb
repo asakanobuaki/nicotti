@@ -4,21 +4,24 @@
       <div class="col-12 col-md-auto text-center">
         <h2 class="text-size">NICOTTI</h2>
         <h5 class="text-family">育成型喫煙管理アプリ</h5>
-        <p class="mt-2">
-        <%= link_to login_path do%>
-          <buttom class="btn header-button btn-lg mx-auto" >ログイン</buttom>
+        <% if logged_in? %>
+          <p class="mt-2">
+          <%= link_to login_path do%>
+            <buttom class="btn header-button btn-lg mx-auto" >ログイン</buttom>
+          <% end %>
+          </p>
+        <% else %>
+          <p>
+          <%= link_to new_user_path do%>
+            <buttom class="btn header-button btn-lg mx-auto" >新規登録</buttom>
+          <% end %>
+          </p>
+          <p>
+          <%= link_to guest_login_path do%>
+            <buttom class="btn header-button btn-lg mx-auto" >ゲストログイン</buttom>
+          <% end %>
+          </p>
         <% end %>
-        </p>
-        <p>
-        <%= link_to new_user_path do%>
-          <buttom class="btn header-button btn-lg mx-auto" >新規登録</buttom>
-        <% end %>
-        </p>
-        <p>
-        <%= link_to guest_login_path do%>
-          <buttom class="btn header-button btn-lg mx-auto" >ゲストログイン</buttom>
-        <% end %>
-        </p>
       </div>
       <div class="col-8 col-md-auto text-center">
         <%= image_tag "piyopiyo.gif", :size =>'180x200'%>

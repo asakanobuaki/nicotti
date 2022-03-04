@@ -3,6 +3,7 @@ ja:
     models:
       user: 'ユーザー'
       user_session: '登録ユーザー'
+      inquiry: お問い合わせ
     attributes:
       user:
         name: '名前'
@@ -10,3 +11,8 @@ ja:
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
         target_number: '1日の目標喫煙本数'
+      inquiry:
+        name: '名前'
+        email: 'メールアドレス'
+        body: 'お問い合わせ内容' 
+        category: 'カテゴリ'
