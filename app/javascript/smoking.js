@@ -31,6 +31,7 @@ $(document).on('turbolinks:load', function() {
             const excessCigarette = data.excess_cigarette;
             const todaySmoking = data.user_smoking;
             const remaining = data.remianing_smoking;
+            const reborn = data.reborn;
 
             // 本日の喫煙log追加
             $(".smoking-log, .smoking-log2").append(data.html);
@@ -48,7 +49,7 @@ $(document).on('turbolinks:load', function() {
                 $('#modalCancer').fadeOut();
               });
             }
-            else if (excessCigarette == 0){
+            else if (excessCigarette == 0 && reborn){
               $("#modalDead").fadeIn();
               $('#closeModal').on('click', function(){
                 $('#modalDead').fadeOut();
