@@ -29,7 +29,7 @@
             <div class='form-group mt-3'>
               <%= f.label :target_number, User.human_attribute_name(:target_number) %>
               <span class='badge rounded-pill bg-warning'>必須</span>
-              <%= f.number_field :target_number, class: 'form-control mt-1', placeholder: '1以上の整数　例：５' %>
+              <%= f.number_field :target_number, class: 'form-control mt-1', placeholder: '例：５（1以上の整数）'%>
             </div>
             <div class='text-center mt-5 mb-5'>
               <%= f.submit t('defaults.register'), class: 'btn login-button' %>
