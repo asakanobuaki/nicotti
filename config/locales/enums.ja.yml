@@ -5,3 +5,8 @@ ja:
         healthy: '健康'
         baldness: 'ハゲ'
         cancer: 'がん'
+    inquiry:
+      category:
+        bug: 'バグや問題の報告'
+        request: '機能追加リクエスト'
+        others: 'その他のお問い合わせ'

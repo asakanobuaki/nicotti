@@ -1,0 +1,11 @@
+<% if @inquiry.name.present? %>
+  <%= @inquiry.name %>様
+<% end %>
+この度は、お問い合わせいただきありがとうございます。
+内容を確認させていただき、今後のサービス改善に役立てて参ります。
+
+カテゴリー:
+<%= I18n.t("enums.inquiry.category.#{@inquiry.category}") %>
+
+問い合わせ内容:
+<%= @inquiry.body %>

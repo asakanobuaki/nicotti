@@ -1,0 +1,34 @@
+<div class='container'> 
+  <div class='row'>
+    <div class="col-lg-11 col-md-11 col-sm-12">
+      <div class='login-layout mx-auto'>
+        <div class='text-center mb-4'>
+          <h3>お問い合わせフォーム</h3>
+        </div>
+          <%= form_with model: @inquiry do |f| %>
+            <div class='form-group mt-3'>
+              <%= f.label :category%>
+              <span class='badge rounded-pill bg-warning'>必須</span>
+              <%= f.select :category, Inquiry.categories.keys.map {|k| [I18n.t("enums.inquiry.category.#{k}"), k]}, { include_blank: false}, class: 'form-select mt-1' %>
+            </div>
+            <div class='form-group mt-2'>
+              <%= f.label :name %>
+              <%= f.text_field :name, class: 'form-control mt-1' %>
+            </div>
+            <div class='form-group mt-2'>
+              <%= f.label :email %>
+              <%= f.text_field :email, class: 'form-control mt-1' %>
+            </div>
+            <div class='form-group mt-2'>
+              <%= f.label :body %>
+              <span class='badge rounded-pill bg-warning'>必須</span>
+              <%= f.text_area :body, size: "20x5", class: 'form-control mt-1' %>
+            </div>
+            <div class='text-center mt-3 mb-3'>
+              <%= f.submit t('defaults.inquiry'), class: 'btn login-button' %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
