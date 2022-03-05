@@ -3,3 +3,25 @@ ja:
     login: 'ログイン'
     register: '新規登録'
     inquiry: '送信'
+  users:
+    new:
+      title: 'ユーザー登録'
+    show:
+      title: 'ユーザー情報'
+    index:
+      title: 'ホーム'
+  user_sessions:
+    new:
+      title: 'ログイン'
+  static_pages:
+    privacy:
+      title: 'プライバシーポリシー'
+    terms:
+      title: '利用規約'
+  smokings:
+    index:
+      title: 'カレンダー'
+  inquiries:
+    new:
+      title: 'お問い合わせ'
+    
