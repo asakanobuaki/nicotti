@@ -34,8 +34,14 @@ gem 'meta-tags'
 # Authentication
 gem 'sorcery' 
 
+# 認可
+gem 'cancancan'
+
 # Model
 gem 'enum_help'
+
+# 管理画面
+gem 'rails_admin', ['>= 3.0.0.rc3', '< 4']
 
 #　環境変数管理
 gem 'dotenv-rails', groups: [:development, :production]

@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def not_authenticated
     flash[:error] = 'ログインしてください'
-    redirect_to login_path
+    redirect_to main_app.login_path
   end
 
 end

@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
   get 'inquiries/new'
-  get 'inquirys/new'
-  root 'static_pages#index'
+  root to: 'static_pages#index'
   get 'terms', to: 'static_pages#terms'
   get 'privacy', to: 'static_pages#privacy'
 
