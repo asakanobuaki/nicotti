@@ -19,20 +19,41 @@ class User < ApplicationRecord
   enum state: { healthy: 0, baldness: 1, cancer: 2 }
   enum role: { general: 0, admin: 10, guest: 20 }
 
-  # 本日の残り喫煙本数(これは画面に表示する内容なのでデコレイターに書くべきなのか？)
   def remaining_number
-    self.target_number.to_i - self.smokings.where(created_at: Date.today.all_day).count
+    self.target_number - today_smokings_count
   end
 
-  def today_smokings
+  def today_smokings_count
     self.smokings.where(created_at: Date.today.all_day).count
+  end
+
+  def target_over
+    if self.today_smokings_count > target_number
+      self.excess_cigarette += 1
+      save
+    end
+  end
+
+  def reborn?
+    return false unless self.excess_cigarette == 10
+    true
+  end
+
+  def user_state
+    if self.excess_cigarette == 6
+      baldness!
+    elsif self.excess_cigarette == 8
+      cancer!
+    elsif self.excess_cigarette == 10
+      self.reset_life
+    end
   end
 
   def reset_life
     self.excess_cigarette = 0
     self.life += 1
-    self.healthy!
-    self.save
+    healthy!
+    save
   end
 
 end

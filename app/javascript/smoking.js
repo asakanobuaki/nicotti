@@ -30,7 +30,7 @@ $(document).on('turbolinks:load', function() {
             const state = data.state;
             const excessCigarette = data.excess_cigarette;
             const todaySmoking = data.user_smoking;
-            const remaining = data.remianing_smoking;
+            const remaining = data.remaining_smoking;
             const reborn = data.reborn;
 
             // 本日の喫煙log追加

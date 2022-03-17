@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
+  before_action :set_user, only: %i[create show update edit destroy]
+
+  def show; end
+  def edit; end
 
   def new
     @user = User.new
@@ -16,18 +20,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
   def index
-    @today = l Date.today #デコレイター行き
     @user = User.find(current_user.id)
     @smokings = current_user.smokings.where(created_at: Date.today.all_day)
   end
 
   def update
-    @user = User.find(params[:id])
     if @user.update(user_params)
       redirect_to @user, success: 'ユーザー情報を更新しました。'
     else
@@ -36,12 +34,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def edit
-    @user = User.find(params[:id])
-  end
-
   def destroy
-    @user = User.find(params[:id])
     @user.destroy!
     redirect_to root_path, info: 'ユーザーを削除しました。'
   end
@@ -49,5 +42,9 @@ class UsersController < ApplicationController
   private
     def user_params
      params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number)
+    end
+
+    def set_user
+      @user = User.find(params[:id])
     end
 end
