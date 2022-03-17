@@ -12,25 +12,9 @@ class SmokingsController < ApplicationController
     @smoking.save!
     
     @user = User.find(current_user.id)
-    reborn = false
-
-    if current_user.smokings.where(created_at: Date.today.all_day).count > current_user.target_number
-      @user.excess_cigarette += 1
-      @user.save
-
-      # ここからモデルにメソッド作る方がいい
-      if @user.excess_cigarette == 6
-        @user.baldness!
-      elsif @user.excess_cigarette == 8
-        @user.cancer!
-      elsif @user.excess_cigarette == 10
-        @user.reset_life
-        reborn = true
-      end
-    end
-
-    user_smoking = @user.smokings.where(created_at: Date.today.all_day).count
-    remianing_smoking = @user.target_number - user_smoking
+    @user.target_over
+    reborn = @user.reborn?
+    @user.user_state
 
     @latest_smoking = current_user.smokings.order(created_at: :desc).limit(1)[0]
     partial = render_to_string(partial: 'smoking', :locals => { smoking: @latest_smoking })
@@ -41,8 +25,8 @@ class SmokingsController < ApplicationController
                     id: @user.id, 
                     excess_cigarette: @user.excess_cigarette,
                     state: @user.state,
-                    user_smoking: user_smoking,
-                    remianing_smoking: remianing_smoking,
+                    user_smoking: @user.today_smokings_count,
+                    remaining_smoking: @user.remaining_number,
                     reborn: reborn,
                     html: partial
                   }
