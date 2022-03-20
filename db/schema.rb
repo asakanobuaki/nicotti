@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_083606) do
+ActiveRecord::Schema.define(version: 2022_03_20_113714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "buddies", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "line_id", null: false
+  end
+
+  create_table "buddy_users", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "buddy_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buddy_id"], name: "index_buddy_users_on_buddy_id"
+    t.index ["user_id", "buddy_id"], name: "index_buddy_users_on_user_id_and_buddy_id", unique: true
+    t.index ["user_id"], name: "index_buddy_users_on_user_id"
+  end
 
   create_table "inquiries", force: :cascade do |t|
     t.string "name"
@@ -55,6 +71,8 @@ ActiveRecord::Schema.define(version: 2022_03_03_083606) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "buddy_users", "buddies"
+  add_foreign_key "buddy_users", "users"
   add_foreign_key "per_day_smokings", "users"
   add_foreign_key "smokings", "users"
 end
