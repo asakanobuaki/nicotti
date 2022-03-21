@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
-  before_action :set_user, only: %i[create show update edit destroy]
+  before_action :set_user, only: %i[show update edit destroy]
 
   def show; end
   def edit; end
@@ -41,10 +41,12 @@ class UsersController < ApplicationController
 
   private
     def user_params
-     params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number)
+     params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number).merge(invite_code: "bID#{SecureRandom.hex(4)}")
     end
 
     def set_user
       @user = User.find(params[:id])
     end
+
+    
 end

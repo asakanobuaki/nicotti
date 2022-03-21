@@ -49,6 +49,9 @@ gem 'dotenv-rails', groups: [:development, :production]
 # 定期実行
 gem 'whenever', require: false
 
+# linebot
+gem 'line-bot-api'
+
 group :development, :test do
   # debugger
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

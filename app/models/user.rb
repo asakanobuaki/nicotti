@@ -17,6 +17,7 @@ class User < ApplicationRecord
   validates :state, presence: true
   validates :life, presence: true
   validates :role, presence: true
+  validates :invite_code, uniqueness: true, presence: true
 
   enum state: { healthy: 0, baldness: 1, cancer: 2 }
   enum role: { general: 0, admin: 10, guest: 20 }
