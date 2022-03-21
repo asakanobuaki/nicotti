@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'terms', to: 'static_pages#terms'
   get 'privacy', to: 'static_pages#privacy'
 
+  post 'callback', to: 'line_bot#callback'
+
   resources :users
   resources :smokings, only: %i[create destroy index]
   resources :inquiries, only: %i[create new]
