@@ -9,6 +9,5 @@ namespace :registration_smokings do
     end
 
     p "ここまでOK"
-
   end
 end
