@@ -104,7 +104,7 @@ class User < ApplicationRecord
         },
         {
           type: "text",
-          text: "#{self.name}さんの喫煙報告",
+          text: "#{self.name}さんの昨日の喫煙報告",
           size: "lg",
           weight: "bold"
         },
@@ -122,7 +122,7 @@ class User < ApplicationRecord
               contents: [
                 {
                   type: "text",
-                  text: "#{I18n.l Date.today}の喫煙本数",
+                  text: "#{I18n.l Date.yesterday}の喫煙本数",
                   weight: "bold",
                   margin: "xs",
                   flex: 0,
@@ -163,7 +163,7 @@ class User < ApplicationRecord
               contents: [
                 {
                   type: "text",
-                  text: "今月の総喫煙本数",
+                  text: "#{Date.yesterday.month}月の総喫煙本数",
                   weight: "bold",
                   margin: "sm",
                   flex: 0
