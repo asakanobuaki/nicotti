@@ -38,7 +38,6 @@ class LineBotController < ApplicationController
             else
               message = reply_text("ユーザーが確認できません。コードを確認して再度送信してください。")
             end
-            
           else
             message = reply_text('申し訳ございません。任意の文字は読み取ることができません。')
           end

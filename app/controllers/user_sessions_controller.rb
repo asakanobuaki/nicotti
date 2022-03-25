@@ -15,7 +15,8 @@ class UserSessionsController < ApplicationController
                             password_confirmation: random_value,
                             excess_cigarette: 5,
                             target_number: 2,
-                            role: :guest
+                            role: :guest,
+                            invite_code: 'not_avaliable'
                           )
       auto_login(@user)
       redirect_to users_path, success: 'ゲストでログインしました'
