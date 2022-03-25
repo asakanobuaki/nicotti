@@ -25,6 +25,7 @@ class SmokingsController < ApplicationController
                     id: @user.id, 
                     excess_cigarette: @user.excess_cigarette,
                     state: @user.state,
+                    life: @user.life,
                     user_smoking: @user.today_smokings_count,
                     remaining_smoking: @user.remaining_number,
                     reborn: reborn,
