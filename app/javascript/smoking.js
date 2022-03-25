@@ -28,12 +28,13 @@ $(document).on('turbolinks:load', function() {
             console.log(data);
 
             const state = data.state;
+            const life = data.life;
             const excessCigarette = data.excess_cigarette;
             const todaySmoking = data.user_smoking;
             const remaining = data.remaining_smoking;
             const reborn = data.reborn;
 
-            // 本日の喫煙log追加
+            // 本日の喫煙レコード追加
             $(".smoking-log, .smoking-log2").append(data.html);
 
             // ステータス変更時modal表示
@@ -50,15 +51,17 @@ $(document).on('turbolinks:load', function() {
               });
             }
             else if (excessCigarette == 0 && reborn){
-              $("#modalDead").fadeIn();
-              $('#closeModal').on('click', function(){
-                $('#modalDead').fadeOut();
-
-              $("#js-status").html("<div class='status-text'>ステータス：健康</div>");
-              $("#js-nicotti-words").html("<div>「今日もすこぶる体調がいいよ！！」</br>「「目標を達成できるよう頑張ろう！」</div>");
+              
+              $("#js-status").replaceWith(`<div class="status-text" id="js-status">ステータス：健康</div>`);
+              $("#js-life").replaceWith(`<div class='status-text' id='js-life'>人生回数　： ${life}回</div>`);
+              $("#js-nicotti-words").replaceWith(`<div id='js-nicotti-words'>「今日もすこぶる体調がいいよ！！」</br>「「目標を達成できるよう頑張ろう！」</div>`);
 
               $(".nicotti-position-1, .nicotti-position-2").fadeOut();
                 $(".nicotti-position").fadeIn();
+                
+              $("#modalDead").fadeIn();
+              $('#closeModal, #modalBg').on('click', function(){
+                $('#modalDead').fadeOut();
               });
             }
             else {
@@ -75,18 +78,18 @@ $(document).on('turbolinks:load', function() {
             // ステータス変更、ニコッチ画像変更
             if (state == "baldness"){
 
-              $("#js-status").html("<div class='status-text'>ステータス：ハゲ</div>");
+              $("#js-status").replaceWith("<div class='status-text' id='js-status'>ステータス：ハゲ</div>");
 
-              $("#js-nicotti-words").html("<div>「なんだか気分が悪いな(;o;)」</br>「君も体調には気をつけてね、、」</div>");
+              $("#js-nicotti-words").replaceWith("<div id='js-nicotti-words'>「なんだか気分が悪いな(;o;)」</br>「君も体調には気をつけてね、、」</div>");
 
               $(".nicotti-position, .nicotti-position-2").fadeOut();
                 $(".nicotti-position-1").fadeIn();
             }
             else if (state == "cancer") {
 
-              $("#js-status").html("<div class='status-text'>ステータス：がん</div>");
+              $("#js-status").replaceWith("<div class='status-text' id='js-status'>ステータス：がん</div>");
 
-              $("#js-nicotti-words").html("<div>「もうだめかもしれない」</br>「でももっと長く生きたいよう。。」</div>");
+              $("#js-nicotti-words").replaceWith("<div id='js-nicotti-words'>「もうだめかもしれない」</br>「でももっと長く生きたいよう。。」</div>");
 
               $(".nicotti-position, .nicotti-position-1").fadeOut();
                 $(".nicotti-position-2").fadeIn();
