@@ -1,0 +1,17 @@
+<div class="card my-1">
+  <div class="card-body">
+    <div class="d-flex align-items-center justify-content-between">
+      <div>
+        <%= image_tag buddy.buddy_image, class: 'rounded-circle', size: '50x50' %>
+        <%= buddy.name %>
+      </div>
+      <div>
+        <%= link_to buddy_path(buddy), 
+                    method: :delete, 
+                    data: { confirm: 'よろしいですか？'} do %>
+          <button class="btn btn-outline-danger btn-sm text-end">連携解除</button>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
