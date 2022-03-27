@@ -24,7 +24,22 @@ class LineBotController < ApplicationController
         
           when /\AbID\w{8}/
             @buddy = Buddy.find_by(line_id: event['source']['userId']) 
-            @buddy = Buddy.create!(line_id: event['source']['userId']) unless @buddy
+
+            if @buddy.blank?
+              response = client.get_profile(event['source']['userId'])
+                case response
+                when Net::HTTPSuccess then
+                  contact = JSON.parse(response.body)
+                  @buddy = Buddy.create!(line_id: event['source']['userId'], name: contact['displayName'], buddy_image: contact['pictureUrl'])
+                else
+                  p "#{
+                response.code
+                } #{
+                response.body
+                }"
+                end
+            end
+
             @user = User.find_by(invite_code: event.message['text'])
             @buddy_user = BuddyUser.find_by(user_id: @user.id, buddy_id: @buddy.id)
 

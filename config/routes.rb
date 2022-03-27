@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'buddies/index'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'inquiries/new'
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :smokings, only: %i[create destroy index]
   resources :inquiries, only: %i[create new]
+  resources :buddies, only: %i[index destroy]
 
   get 'login', to: 'user_sessions#new'
   get 'guest_login', to: 'user_sessions#guest_login'
