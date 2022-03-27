@@ -2,8 +2,12 @@
   <div class="card-body">
     <div class="d-flex align-items-center justify-content-between">
       <div>
-        <%= image_tag buddy.buddy_image, class: 'rounded-circle', size: '50x50' %>
-        <%= buddy.name %>
+        <% if buddy.buddy_image.blank? %>
+          <%= image_tag 'hiyoko.png', class: 'rounded-circle', size: '50x50' %>
+        <% else %>
+          <%= image_tag buddy.buddy_image, class: 'rounded-circle', size: '50x50' %>
+        <% end %>
+          <%= buddy.name %>
       </div>
       <div>
         <%= link_to buddy_path(buddy), 
