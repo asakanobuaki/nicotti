@@ -5,7 +5,11 @@
         <div class='text-center mt-2 mb-5'>
           <h2>バディ一覧</h2>
         </div>
-        <%= render @buddies %> 
+        <% if @buddies.present? %>
+          <%= render @buddies %>
+        <% else %>
+          <div class='text-center'>バディは登録されていません。</div>
+        <% end %>
         <div class="text-center mt-5">
           <a class="btn btn-outline-primary btn-sm" href="https://line.me/R/nv/recommendOA/@333ccneh">新規バディ連携</a>
           <a class="btn btn-outline-primary btn-sm" href="https://line.me/R/share?text=<%=current_user.invite_code %>">バディコード送信</a>
