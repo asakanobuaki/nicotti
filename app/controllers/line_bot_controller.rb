@@ -21,6 +21,9 @@ class LineBotController < ApplicationController
           case event.message['text']
           when 'バディ申請'
             message = reply_text('【バディ招待コード】を送信してください')
+          
+          when 'バディ機能の使い方'
+            message = reply_image('https://drive.google.com/file/d/1Q2KpTSCztSDu51CwV-ymB_P0RSom7qhF/view?usp=sharing')
         
           when /\AbID\w{8}/
             @buddy = Buddy.find_by(line_id: event['source']['userId']) 
@@ -77,4 +80,9 @@ class LineBotController < ApplicationController
   def reply_text(text)
     {type: 'text', text: text}
   end
+
+  def reply_image(image)
+    {type: 'image', originalContentUrl: image, previewImageUrl: image}
+  end
+
 end
