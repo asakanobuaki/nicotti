@@ -23,7 +23,7 @@ class LineBotController < ApplicationController
             message = reply_text('【バディ招待コード】を送信してください')
           
           when 'バディ機能の使い方'
-            message = reply_image('https://drive.google.com/file/d/1Q2KpTSCztSDu51CwV-ymB_P0RSom7qhF/view?usp=sharing')
+            message = reply_image('https://urlzs.com/n46PS')
         
           when /\AbID\w{8}/
             @buddy = Buddy.find_by(line_id: event['source']['userId']) 
