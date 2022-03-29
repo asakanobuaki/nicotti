@@ -27,7 +27,7 @@ NICOTTI(ニコッチ)を育成しながら一緒に喫煙を楽しく管理で�
 | ホーム画面 | ステータス変化 | 本日の喫煙記録|
 |---|---|---|
 | <img width="150%" alt="スクリーンショット 2022-03-28 22 08 17" src="https://user-images.githubusercontent.com/81806277/160519111-682a8b77-7784-41f1-b504-6d2c5d2aa549.png"> | <img width="150%" alt="to_cancer" src="https://user-images.githubusercontent.com/81806277/160519186-8c287e6b-a840-4960-af5c-f2e38c8b026b.gif"> | <img width="150%" alt="honnjituno" src="https://user-images.githubusercontent.com/81806277/160527267-5f7d434f-8e8a-4f8b-bf22-e426ee714bea.gif"> |
-| 携帯ゲームのような表示画面で、いかにもキャラクターを飼っているかのような画面設計にしています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ステータスは【健康】【ハゲ】【がん】の３つで、最後には死を迎えて甦る設計になっています。 操作は全てajax通信で実装し、UXが高まるよう意識して作成しました。 | ホーム画面上で本日の喫煙を分単位で確認できます。喫煙するたびに非同期で喫煙レコードが追加されます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| 携帯ゲームのような表示画面で、いかにもキャラクターを飼っているかのような画面設計にしています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ステータスは【健康】【ハゲ】【がん】の３つで、最後には死を迎えて甦る設計になっています。 操作は全てajax通信で実装し、UXが高まるよう意識して作成しました。 | ホーム画面上で本日の喫煙を分単位で確認できます。喫煙するたびに非同期で喫煙レコードが追加されます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 
 | カレンダー画面 | バディ一覧(LINE連携) | LINEバディ通知画面 |
 |---|---|---|
