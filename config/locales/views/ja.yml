@@ -24,4 +24,7 @@ ja:
   inquiries:
     new:
       title: 'お問い合わせ'
+  buddies:
+    index:
+      title: 'バディ一覧'
     

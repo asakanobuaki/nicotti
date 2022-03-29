@@ -4,6 +4,7 @@ ja:
       user: 'ユーザー'
       user_session: '登録ユーザー'
       inquiry: お問い合わせ
+      buddy: 'バディ'
     attributes:
       user:
         name: '名前'
@@ -16,3 +17,6 @@ ja:
         email: 'メールアドレス'
         body: 'お問い合わせ内容' 
         category: 'カテゴリ'
+      buddy:
+        name: '名前'
+        
