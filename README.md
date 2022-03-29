@@ -21,13 +21,13 @@ NICOTTI(ニコッチ)を育成しながら一緒に喫煙を楽しく管理で�
 ## 主なページと機能
 | Topページ | ユーザー登録画面 | ホーム画面 |
 | --- | --- | --- |
-| <img width="200%" alt="スクリーンショット 2022-03-28 22 02 52" src="https://user-images.githubusercontent.com/81806277/160404212-e24d240e-2eb2-475e-8b26-39353f455744.png"> | <img width="150%" alt="スクリーンショット 2022-03-28 22 04 41" src="https://user-images.githubusercontent.com/81806277/160404288-1382e75e-49bc-48ff-b31a-c25f0c7f41aa.png"> | <img width="200%" alt="スクリーンショット 2022-03-29 11 17 19" src="https://user-images.githubusercontent.com/81806277/160519384-f7d2c9a4-ec51-46d0-8ced-76cbd71cb731.png"> |
+| <img width="200%" alt="スクリーンショット 2022-03-28 22 02 52" src="https://user-images.githubusercontent.com/81806277/160404212-e24d240e-2eb2-475e-8b26-39353f455744.png"> | <img width="160%" alt="スクリーンショット 2022-03-28 22 04 41" src="https://user-images.githubusercontent.com/81806277/160404288-1382e75e-49bc-48ff-b31a-c25f0c7f41aa.png"> | <img width="200%" alt="スクリーンショット 2022-03-29 11 17 19" src="https://user-images.githubusercontent.com/81806277/160519384-f7d2c9a4-ec51-46d0-8ced-76cbd71cb731.png"> |
 | シンプルでわかりやすいデザインを意識しました。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 各々のフォームの下にエラーメッセージが表示されるように実装し、ユーザーが操作をしやすいように工夫しています。 | コチラもシンプルな画面にしています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 
 
 | ホーム画面 | ステータス変化 | 本日の喫煙記録|
 |---|---|---|
 | <img width="150%" alt="スクリーンショット 2022-03-28 22 08 17" src="https://user-images.githubusercontent.com/81806277/160519111-682a8b77-7784-41f1-b504-6d2c5d2aa549.png"> | <img width="150%" alt="to_cancer" src="https://user-images.githubusercontent.com/81806277/160519186-8c287e6b-a840-4960-af5c-f2e38c8b026b.gif"> | <img width="150%" alt="honnjituno" src="https://user-images.githubusercontent.com/81806277/160527267-5f7d434f-8e8a-4f8b-bf22-e426ee714bea.gif"> |
-| 携帯ゲームのような表示画面で、いかにもキャラクターを飼っているかのような画面設計にしています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ステータスは【健康】【ハゲ】【がん】の３つで、最後には死を迎えて甦る設計になっています。 操作は全てajax通信で実装し、UXが高まるよう意識して作成しました。 | ホーム画面上で本日の喫煙を分単位で確認できます。喫煙するたびに非同期で喫煙レコードが追加されます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| 携帯ゲームのような表示画面で、いかにもキャラクターを飼っているかのような画面設計にしています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ステータスは【健康】【ハゲ】【がん】の３つで、最後には死を迎えて甦る設計になっています。 操作は全てajax通信で実装し、UXが高まるよう意識して作成しました。 | ホーム画面上で本日の喫煙を分単位で確認できます。喫煙するたびに非同期で喫煙レコードが追加されます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 
 | カレンダー画面 | バディ一覧(LINE連携) | LINEバディ通知画面 |
 |---|---|---|
