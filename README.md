@@ -32,7 +32,7 @@ NICOTTI(ニコッチ)を育成しながら一緒に喫煙を楽しく管理で�
 | カレンダー画面 | バディ一覧(LINE連携) | LINEバディ通知画面 |
 |---|---|---|
 | <img width="200%" alt="week-caledar" src="https://user-images.githubusercontent.com/81806277/160521081-3cd7df94-1efd-46d2-9cef-b6edc2945f72.png"> | <img width="200%" alt="スクリーンショット 2022-03-27 23 51 07" src="https://user-images.githubusercontent.com/81806277/160521906-d10ec3a6-9d64-4755-8ff8-9578e727de0a.png"> | <img width="200%" alt="LINE通知サンプル" src="https://user-images.githubusercontent.com/81806277/160524723-6b1a8d87-da96-4d73-a3a6-7ef226aaaeb0.jpg"> |
-| 過去の喫煙を分単位で振り返ることができます。「月」「週」「日」の3つの表示形式で閲覧することができます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LINEを使用した通知機能のバディ連携先一覧です。バディ連携をしたLINEアカウントのLINE ID使ってLINEのプロフィール情報を取得し表示しています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 毎朝7時にバディ連携したNICOTTIユーザーの昨日1日の喫煙本数が自動で通知されます。 |
+| 過去の喫煙を分単位で振り返ることができます。「月」「週」「日」の3つの表示形式で閲覧することができます。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | LINEを使用した通知機能のバディ連携先一覧です。バディ連携をしたLINEアカウントのLINE ID使ってLINEのプロフィール情報を取得し表示しています。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 毎朝7時にバディ連携したNICOTTIユーザーの昨日1日の喫煙本数が自動で通知されます。 |
 
 
 ## 使用技術
