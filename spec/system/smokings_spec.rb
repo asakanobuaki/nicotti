@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Smoking', type: :system do
 
+include SmokingRegistrationModule
+
   let(:user) { create(:user) }
   let(:baldness_user) { create(:user, :baldness) }
   let(:cancer_user) { create(:user, :cancer) }
@@ -22,10 +24,7 @@ RSpec.describe 'Smoking', type: :system do
       end
 
       it '「一服する」ボタンを押すと本日の喫煙レコードが追加される', js: true do
-        find('#js-smoking-buttom').click
-        expect(page).to have_content('喫煙しますか?')
-        find('.swal2-confirm').click
-        find('.swal2-confirm').click
+        smoking_registration
         within('.smoking-log') do
           expect(page).to have_content(I18n.l Time.current, format: :short)
         end
@@ -41,10 +40,7 @@ RSpec.describe 'Smoking', type: :system do
       end
 
       it '喫煙するとニコッチのステータスが「ハゲ」になる' do
-        find('#js-smoking-buttom').click
-        expect(page).to have_content('喫煙しますか?')
-        find('.swal2-confirm').click
-        find('.swal2-confirm').click
+        smoking_registration
         within('#modalBaldness') do
           expect(page).to have_content('毛が抜け始めました')
         end
@@ -62,10 +58,7 @@ RSpec.describe 'Smoking', type: :system do
       end
 
       it '喫煙するとニコッチのステータスが「がん」になる' do
-        find('#js-smoking-buttom').click
-        expect(page).to have_content('喫煙しますか?')
-        find('.swal2-confirm').click
-        find('.swal2-confirm').click
+        smoking_registration
         within('#modalCancer') do
           expect(page).to have_content('深刻な病気になりました')
         end
@@ -82,10 +75,7 @@ RSpec.describe 'Smoking', type: :system do
       end
 
       it '喫煙するとニコッチ甦る' do
-        find('#js-smoking-buttom').click
-        expect(page).to have_content('喫煙しますか?')
-        find('.swal2-confirm').click
-        find('.swal2-confirm').click
+        smoking_registration
         within('#modalDead') do
           expect(page).to have_content('ニコッチが亡くなりました')
         end
