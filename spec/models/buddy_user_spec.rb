@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe BuddyUser, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'user_idとbuddy_idが存在すると有効な状態である' do
+    buddy_user = build(:buddy_user)
+    expect(buddy_user).to be_valid
+  end
 end
