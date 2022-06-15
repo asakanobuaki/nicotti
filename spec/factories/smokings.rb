@@ -1,5 +1,9 @@
 FactoryBot.define do
   factory :smoking do
-    user { nil }
+    association :user
+
+    trait :invalid do
+      user { nil }
+    end
   end
 end
