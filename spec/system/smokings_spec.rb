@@ -39,7 +39,7 @@ include SmokingRegistrationModule
         visit users_path
       end
 
-      it '喫煙するとニコッチのステータスが「ハゲ」になる' do
+      it '喫煙するとニコッチのステータスが「ハゲ」になる', js: true do
         smoking_registration
         within('#modalBaldness') do
           expect(page).to have_content('毛が抜け始めました')
@@ -57,7 +57,7 @@ include SmokingRegistrationModule
         visit users_path
       end
 
-      it '喫煙するとニコッチのステータスが「がん」になる' do
+      it '喫煙するとニコッチのステータスが「がん」になる', js: true do
         smoking_registration
         within('#modalCancer') do
           expect(page).to have_content('深刻な病気になりました')
@@ -74,7 +74,7 @@ include SmokingRegistrationModule
         visit users_path
       end
 
-      it '喫煙するとニコッチ甦る' do
+      it '喫煙するとニコッチ甦る', js: true do
         smoking_registration
         within('#modalDead') do
           expect(page).to have_content('ニコッチが亡くなりました')
