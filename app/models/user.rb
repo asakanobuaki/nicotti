@@ -23,48 +23,50 @@ class User < ApplicationRecord
   enum role: { general: 0, admin: 10, guest: 20 }
 
   def remaining_number
-    self.target_number - today_smokings_count
+    target_number - today_smokings_count
   end
 
   def today_smokings_count
-    self.smokings.where(created_at: Date.today.all_day).count
+    smokings.where(created_at: Date.today.all_day).count
   end
 
   def yesterday_smokings_count
-    self.smokings.where(created_at: Date.yesterday.all_day, user_id: self.id).count
+    smokings.where(created_at: Date.yesterday.all_day, user_id: id).count
   end
 
   def monthly_smokings_count
-    self.smokings.where(created_at: Date.yesterday.all_month).count
+    smokings.where(created_at: Date.yesterday.all_month).count
   end
 
+  # 1日の目標喫煙本数を超過している場合、超過本数が１プラスされる。
   def target_over
-    if self.today_smokings_count > target_number
+    if today_smokings_count > target_number
       self.excess_cigarette += 1
-      save
     end
   end
 
-  def reborn?
-    return false unless self.excess_cigarette == 10
-    true
-  end
-
+    # 超過喫煙本数に応じてステータスを変更
   def user_state
-    if self.excess_cigarette == 6
+    case excess_cigarette
+    when 6
       baldness!
-    elsif self.excess_cigarette == 8
+    when 8
       cancer!
-    elsif self.excess_cigarette == 10
-      self.reset_life
+    when 10
+      reset_life
     end
   end
 
+  # 蘇るメソッド(人生回数のみ１加算,その他はデフォルトに戻す)
   def reset_life
     self.excess_cigarette = 0
     self.life += 1
     healthy!
-    save
+  end
+
+    # 超過喫煙本数に達したらtrueを返す
+  def reborn?
+    excess_cigarette == 10
   end
 
   def set_bubble
