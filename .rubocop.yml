@@ -1,0 +1,16 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'bin/**/*'
+    - 'spec/**/*'
+    - 'node_modules/**/*'
+  DisplayCopNames: true

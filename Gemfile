@@ -66,7 +66,9 @@ group :development, :test do
   gem 'factory_bot_rails'
 
 	# Code analyze
+  gem 'rubocop', require: false
 	gem 'rubocop-rails', require: false
+  gem 'rubocop-performance', require: false
 	gem 'bullet'
 end
 
