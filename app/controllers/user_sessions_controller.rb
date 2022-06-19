@@ -4,23 +4,20 @@ class UserSessionsController < ApplicationController
   def new;end
 
   def guest_login
-    if current_user
-      redirect_to root_path, error: 'すでにログインしています' 
-    else
+    return redirect_to root_path, error: 'すでにログインしています' if current_user
 
-      random_value = SecureRandom.hex(4)
-      @user = User.create!( name: 'ゲストユーザー',
-                            email: "guest_#{random_value}@email.com",
-                            password: random_value,
-                            password_confirmation: random_value,
-                            excess_cigarette: 5,
-                            target_number: 2,
-                            role: :guest,
-                            invite_code: random_value
-                          )
-      auto_login(@user)
-      redirect_to users_path, success: 'ゲストでログインしました'
-    end
+    random_value = SecureRandom.hex(4)
+    user = User.create!( name: 'ゲストユーザー',
+                          email: "guest_#{random_value}@email.com",
+                          password: random_value,
+                          password_confirmation: random_value,
+                          excess_cigarette: 5,
+                          target_number: 2,
+                          role: :guest,
+                          invite_code: random_value
+                        )
+    auto_login(user)
+    redirect_to users_path, success: 'ゲストでログインしました'
   end
 
   def create

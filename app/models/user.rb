@@ -31,7 +31,7 @@ class User < ApplicationRecord
   end
 
   def yesterday_smokings_count
-    smokings.where(created_at: Date.yesterday.all_day, user_id: id).count
+    smokings.where(created_at: Date.yesterday.all_day).count
   end
 
   def monthly_smokings_count
@@ -77,7 +77,7 @@ class User < ApplicationRecord
                   type: "bubble",
                   size: "mega",
                   hero: set_hero,
-                  body: self.set_body
+                  body: set_body
                   # footer: set_footer,
                   # style: set_style
                 }
@@ -106,7 +106,7 @@ class User < ApplicationRecord
         },
         {
           type: "text",
-          text: "#{self.name}さんの昨日の喫煙報告",
+          text: "#{name}さんの昨日の喫煙報告",
           size: "lg",
           weight: "bold"
         },
@@ -132,7 +132,7 @@ class User < ApplicationRecord
                 },
                 {
                   type: "text",
-                  text: "#{self.yesterday_smokings_count}本",
+                  text: "#{yesterday_smokings_count}本",
                   size: "lg",
                   align: "end",
                   weight: "bold"
@@ -152,7 +152,7 @@ class User < ApplicationRecord
                 },
                 {
                   type: "text",
-                  text: "#{self.target_number}本",
+                  text: "#{target_number}本",
                   size: "lg",
                   align: "end",
                   weight: "bold"
@@ -172,7 +172,7 @@ class User < ApplicationRecord
                 },
                 {
                   type: "text",
-                  text: "#{self.monthly_smokings_count}本",
+                  text: "#{monthly_smokings_count}本",
                   size: "lg",
                   align: "end",
                   weight: "bold"
@@ -183,7 +183,7 @@ class User < ApplicationRecord
         },
         {
           type: "text",
-          text: "バディコード: #{self.invite_code}",
+          text: "バディコード: #{invite_code}",
           wrap: true,
           color: "#aaaaaa",
           size: "xxs"
