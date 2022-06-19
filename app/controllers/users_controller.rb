@@ -41,7 +41,7 @@ class UsersController < ApplicationController
 
   private
     def user_params
-     params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number).merge(invite_code: "bID#{SecureRandom.hex(4)}")
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number).merge(invite_code: "bID#{SecureRandom.hex(4)}")
     end
 
     def set_user

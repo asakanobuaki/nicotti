@@ -15,10 +15,10 @@ class SmokingsController < ApplicationController
     @user.target_over
     reborn = @user.reborn?
     @user.user_state
+    @user.save!
 
-    @latest_smoking = current_user.smokings.order(created_at: :desc).limit(1)[0]
-    partial = render_to_string(partial: 'smoking', :locals => { smoking: @latest_smoking })
-   
+    partial = render_to_string(partial: 'smoking', :locals => { smoking: @smoking })
+
     respond_to do |format|
       format.html
       format.json { render json: {
@@ -33,7 +33,6 @@ class SmokingsController < ApplicationController
                   }
       }
     end
-
   end
 
   def destroy
