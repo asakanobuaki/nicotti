@@ -1,6 +1,5 @@
 class SmokingsController < ApplicationController
-
-  def new;end
+  def new; end
 
   def index
     @smokings = current_user.smokings
@@ -10,28 +9,29 @@ class SmokingsController < ApplicationController
   def create
     @smoking = current_user.smokings.build
     @smoking.save!
-    
+
     @user = User.find(current_user.id)
     @user.target_over
     reborn = @user.reborn?
     @user.user_state
     @user.save!
 
-    partial = render_to_string(partial: 'smoking', :locals => { smoking: @smoking })
+    partial = render_to_string(partial: 'smoking', locals: { smoking: @smoking })
 
     respond_to do |format|
       format.html
-      format.json { render json: {
-                    id: @user.id, 
-                    excess_cigarette: @user.excess_cigarette,
-                    state: @user.state,
-                    life: @user.life,
-                    user_smoking: @user.today_smokings_count,
-                    remaining_smoking: @user.remaining_number,
-                    reborn: reborn,
-                    html: partial
-                  }
-      }
+      format.json do
+        render json: {
+          id: @user.id,
+          excess_cigarette: @user.excess_cigarette,
+          state: @user.state,
+          life: @user.life,
+          user_smoking: @user.today_smokings_count,
+          remaining_smoking: @user.remaining_number,
+          reborn: reborn,
+          html: partial
+        }
+      end
     end
   end
 

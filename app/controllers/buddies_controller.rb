@@ -1,6 +1,4 @@
 class BuddiesController < ApplicationController
-
-
   def index
     @buddies = current_user.buddies
   end

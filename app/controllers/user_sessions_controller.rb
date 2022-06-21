@@ -1,21 +1,20 @@
 class UserSessionsController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create, :guest_login]
+  skip_before_action :require_login, only: %i[new create guest_login]
 
-  def new;end
+  def new; end
 
   def guest_login
     return redirect_to root_path, error: 'すでにログインしています' if current_user
 
     random_value = SecureRandom.hex(4)
-    user = User.create!( name: 'ゲストユーザー',
-                          email: "guest_#{random_value}@email.com",
-                          password: random_value,
-                          password_confirmation: random_value,
-                          excess_cigarette: 5,
-                          target_number: 2,
-                          role: :guest,
-                          invite_code: random_value
-                        )
+    user = User.create!(name: 'ゲストユーザー',
+                        email: "guest_#{random_value}@email.com",
+                        password: random_value,
+                        password_confirmation: random_value,
+                        excess_cigarette: 5,
+                        target_number: 2,
+                        role: :guest,
+                        invite_code: random_value)
     auto_login(user)
     redirect_to users_path, success: 'ゲストでログインしました'
   end

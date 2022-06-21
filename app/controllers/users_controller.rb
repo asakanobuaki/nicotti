@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: %i[new create]
   before_action :set_user, only: %i[show update edit destroy]
 
   def show; end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
-    @smokings = current_user.smokings.where(created_at: Date.today.all_day)
+    @smokings = current_user.smokings.where(created_at: Time.zone.today.all_day)
   end
 
   def update
@@ -40,13 +40,16 @@ class UsersController < ApplicationController
   end
 
   private
-    def user_params
-      params.require(:user).permit(:name, :email, :password, :password_confirmation, :target_number).merge(invite_code: "bID#{SecureRandom.hex(4)}")
-    end
 
-    def set_user
-      @user = User.find(params[:id])
-    end
+  def user_params
+    params.require(:user).permit(:name,
+                                 :email,
+                                 :password,
+                                 :password_confirmation,
+                                 :target_number).merge(invite_code: "bID#{SecureRandom.hex(4)}")
+  end
 
-    
+  def set_user
+    @user = User.find(params[:id])
+  end
 end

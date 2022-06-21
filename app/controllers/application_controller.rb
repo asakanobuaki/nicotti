@@ -8,5 +8,4 @@ class ApplicationController < ActionController::Base
     flash[:error] = 'ログインしてください'
     redirect_to main_app.login_path
   end
-
 end
