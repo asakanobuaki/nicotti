@@ -14,3 +14,38 @@ AllCops:
     - 'spec/**/*'
     - 'node_modules/**/*'
   DisplayCopNames: true
+
+Layout/MultilineBlockLayout:
+  Exclude:
+    - 'spec/**/*_spec.rb'
+
+Metrics/AbcSize:
+  Max: 25
+
+# Metrics/CyclomaticComplexity:
+#   Max: 30
+
+# Metrics/MethodLength:
+#   CountComments: false
+#   Max: 30
+
+# Naming/AccessorMethodName:
+#   Exclude:
+#     - 'app/controllers/**/*'
+
+Style/AsciiComments:
+  Enabled: false
+
+# Style/BlockDelimiters:
+#   Exclude:
+#     - 'spec/**/*_spec.rb'
+
+# Style/Documentation:
+#   Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# クラスにコメントを残さない
+Style/Documentation:
+  Enabled: false

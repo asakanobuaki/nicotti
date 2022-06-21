@@ -23,7 +23,6 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-
 # UI/UX
 gem 'rails-i18n', '~> 6.0'
 gem 'i18n_generators'
@@ -32,7 +31,7 @@ gem 'i18n_generators'
 gem 'meta-tags'
 
 # Authentication
-gem 'sorcery' 
+gem 'sorcery'
 
 # 認可
 gem 'cancancan'
@@ -43,8 +42,8 @@ gem 'enum_help'
 # 管理画面
 gem 'rails_admin', ['>= 3.0.0.rc3', '< 4']
 
-#　環境変数管理
-gem 'dotenv-rails', groups: [:development, :production]
+# 環境変数管理
+gem 'dotenv-rails', groups: %i[development production]
 
 # 定期実行
 gem 'whenever', require: false
@@ -54,22 +53,22 @@ gem 'line-bot-api'
 
 group :development, :test do
   # debugger
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-	gem 'pry-rails'
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-doc'
-	gem 'better_errors'
+  gem 'better_errors'
   gem 'binding_of_caller'
 
-	# test
+  # test
   gem 'rspec-rails'
   gem 'factory_bot_rails'
 
-	# Code analyze
+  # Code analyze
   gem 'rubocop', require: false
-	gem 'rubocop-rails', require: false
+  gem 'rubocop-rails', require: false
   gem 'rubocop-performance', require: false
-	gem 'bullet'
+  gem 'bullet'
 end
 
 group :development do
@@ -91,4 +90,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
