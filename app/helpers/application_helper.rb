@@ -10,8 +10,8 @@ module ApplicationHelper
       canonical: request.original_url,
       separator: ':',
       icon: [
-        { href: image_url('favicon.png')},
-        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' },
+        { href: image_url('favicon.png') },
+        { href: image_url('favicon.png'), rel: 'apple-touch-icon', sizes: '180x180', type: 'image/jpg' }
       ],
       og: {
         site_name: :site,
@@ -20,11 +20,11 @@ module ApplicationHelper
         type: 'website',
         url: request.original_url,
         image: image_url('twitter-card-img.jpg'),
-        locale: 'ja_JP',
+        locale: 'ja_JP'
       },
       twitter: {
         card: 'summary_large_image',
-        image: image_url('twitter-card-img.jpg'),
+        image: image_url('twitter-card-img.jpg')
       }
     }
   end
