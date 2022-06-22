@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_27_042006) do
+ActiveRecord::Schema.define(version: 2022_06_22_023124) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2022_03_27_042006) do
     t.string "line_id", null: false
     t.string "name"
     t.string "buddy_image"
+    t.index ["line_id"], name: "index_buddies_on_line_id", unique: true
   end
 
   create_table "buddy_users", force: :cascade do |t|
