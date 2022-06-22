@@ -20,20 +20,20 @@ Layout/MultilineBlockLayout:
 
 Metrics/AbcSize:
   Max: 25
-  Exclude:
-    - 'app/controllers/line_bot_controller.rb'
+#   Exclude:
+#     - 'app/controllers/line_bot_controller.rb'
 
-Metrics/CyclomaticComplexity:
-  Exclude:
-    - 'app/controllers/line_bot_controller.rb'
+# Metrics/CyclomaticComplexity:
+#   Exclude:
+#     - 'app/controllers/line_bot_controller.rb'
 
-Metrics/MethodLength:
-  Exclude:
-    - 'app/controllers/line_bot_controller.rb'
+# Metrics/MethodLength:
+#   Exclude:
+#     - 'app/controllers/line_bot_controller.rb'
 
-Metrics/PerceivedComplexity:
-  Exclude:
-    - 'app/controllers/line_bot_controller.rb'
+# Metrics/PerceivedComplexity:
+#   Exclude:
+#     - 'app/controllers/line_bot_controller.rb'
 
 
 # Metrics/CyclomaticComplexity:
@@ -42,6 +42,12 @@ Metrics/PerceivedComplexity:
 Metrics/MethodLength:
   CountComments: false
   Max: 30
+  Exclude:
+    - 'app/models/user.rb'
+
+
+Metrics/ClassLength:
+  Max: 200
 
 # Naming/AccessorMethodName:
 #   Exclude:
