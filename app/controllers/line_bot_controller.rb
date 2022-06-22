@@ -3,7 +3,6 @@ class LineBotController < ApplicationController
   skip_before_action :require_login, only: [:callback]
 
   def callback
-
     # StringIOクラスをreadメソッドで文字列に変換
     body = request.body.read
 
@@ -26,20 +25,17 @@ class LineBotController < ApplicationController
             message = reply_image('https://lh3.googleusercontent.com/pw/AM-JKLU815jeAsAj_KbgojkKmzyBFr61Us2L9zrabcTRoPLZKAaaN0ljC9MV4MIh-1UbLDmDgjVgHkwo7PO0ENzUWpuE6BUkzQAdlh63sEnFCyjK52QuqWja_dQK_1hi6h4yoiQARQemCJktFiQSCjD0YV0=w1216-h1642-no?authuser=2')
         
           when /\AbID\w{8}/
-            @buddy = Buddy.find_by(line_id: event['source']['userId']) 
+            @buddy = Buddy.find_by(line_id: event['source']['userId'])
 
             if @buddy.blank?
               response = client.get_profile(event['source']['userId'])
                 case response
-                when Net::HTTPSuccess then
+                when Net::HTTPSuccess
                   contact = JSON.parse(response.body)
-                  @buddy = Buddy.create!(line_id: event['source']['userId'], name: contact['displayName'], buddy_image: contact['pictureUrl'])
-                else
-                  p "#{
-                response.code
-                } #{
-                response.body
-                }"
+                  @buddy = Buddy.create!( line_id: event['source']['userId'], 
+                                          name: contact['displayName'], 
+                                          buddy_image: contact['pictureUrl']
+                                        )
                 end
             end
 
@@ -54,7 +50,7 @@ class LineBotController < ApplicationController
                 message = reply_text("【#{@user.name}】さんはバディ登録済みです。")
               end
             else
-              message = reply_text("ユーザーが確認できません。コードを確認して再度送信してください。")
+              message = reply_text('ユーザーが確認できません。コードを確認して再度送信してください。')
             end
           else
             message = reply_text('申し訳ございません。任意の文字は読み取ることができません。')

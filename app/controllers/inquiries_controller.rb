@@ -1,6 +1,5 @@
 class InquiriesController < ApplicationController
-  skip_before_action :require_login, only: [ :new, :create]
-
+  skip_before_action :require_login, only: %i[new create]
 
   def new
     @inquiry = Inquiry.new
@@ -16,10 +15,9 @@ class InquiriesController < ApplicationController
     end
   end
 
-
   private
 
-    def inquiry_params
-      params.require(:inquiry).permit(:name, :email, :category, :body)
-    end
+  def inquiry_params
+    params.require(:inquiry).permit(:name, :email, :category, :body)
+  end
 end
