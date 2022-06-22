@@ -12,32 +12,18 @@ AllCops:
     - 'spec/**/*'
     - 'node_modules/**/*'
     - 'app/controllers/line_bot_controller.rb'
+    - 'config/application.rb'
   DisplayCopNames: true
 
 Layout/MultilineBlockLayout:
   Exclude:
     - 'spec/**/*_spec.rb'
 
+Layout/LineLength:
+  Max: 150
+
 Metrics/AbcSize:
   Max: 25
-#   Exclude:
-#     - 'app/controllers/line_bot_controller.rb'
-
-# Metrics/CyclomaticComplexity:
-#   Exclude:
-#     - 'app/controllers/line_bot_controller.rb'
-
-# Metrics/MethodLength:
-#   Exclude:
-#     - 'app/controllers/line_bot_controller.rb'
-
-# Metrics/PerceivedComplexity:
-#   Exclude:
-#     - 'app/controllers/line_bot_controller.rb'
-
-
-# Metrics/CyclomaticComplexity:
-#   Max: 30
 
 Metrics/MethodLength:
   CountComments: false
@@ -49,19 +35,11 @@ Metrics/MethodLength:
 Metrics/ClassLength:
   Max: 200
 
-# Naming/AccessorMethodName:
-#   Exclude:
-#     - 'app/controllers/**/*'
+Metrics/BlockLength:
+  Max: 40
 
 Style/AsciiComments:
   Enabled: false
-
-# Style/BlockDelimiters:
-#   Exclude:
-#     - 'spec/**/*_spec.rb'
-
-# Style/Documentation:
-#   Enabled: false
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -72,6 +50,3 @@ Style/Documentation:
 
 Bundler/OrderedGems:
   Enabled: false
-
-# Metrics/BlockNesting:
-#   Max: 5
